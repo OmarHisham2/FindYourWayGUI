@@ -1,31 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>E:/DS Project Stuff/Images/logo grey.png</file>
-        <file>E:/DS Project Stuff/Images/logo.png</file>
-        <file>E:/DS Project Stuff/Images/star.png</file>
-        <file>E:/DS Project Stuff/Images/stargreen.png</file>
-        <file>E:/DS Project Stuff/Images/vw.png</file>
-        <file>E:/DS Project Stuff/Images/vw3arrow.png</file>
-        <file>E:/DS Project Stuff/Images/vw3arrowgreen.png</file>
-        <file>E:/DS Project Stuff/Images/vw3arrowleft.png</file>
-        <file>E:/DS Project Stuff/Images/vw3arrowleftgreen.png</file>
-        <file>E:/DS Project Stuff/Images/vw3arrowrightgreen.png</file>
-        <file>E:/DS Project Stuff/Images/vw3left.png</file>
-        <file>E:/DS Project Stuff/Images/vw3leftarrow.png</file>
-        <file>E:/DS Project Stuff/Images/vw3leftgreen.png</file>
-        <file>E:/DS Project Stuff/Images/vw3right.png</file>
-        <file>E:/DS Project Stuff/Images/vw3rightgreen.png</file>
-        <file>E:/DS Project Stuff/Images/vwgreen.png</file>
-        <file>E:/DS Project Stuff/SFX/music/background.mp3</file>
-        <file>E:/DS Project Stuff/SFX/music/background2.mp3</file>
-        <file>E:/DS Project Stuff/SFX/music/backgroundgame.mp3</file>
-        <file>E:/DS Project Stuff/SFX/e.mp3</file>
-        <file>E:/DS Project Stuff/SFX/Hover.mp3</file>
-        <file>E:/DS Project Stuff/SFX/minus.mp3</file>
-        <file>E:/DS Project Stuff/SFX/plus.mp3</file>
-        <file>E:/DS Project Stuff/SFX/Select.mp3</file>
-        <file>E:/DS Project Stuff/SFX/startgame.mp3</file>
-        <file>E:/DS Project Stuff/SFX/finish.mp3</file>
         <file>D:/DS Project Stuff/Images/logo grey.png</file>
         <file>D:/DS Project Stuff/Images/logo.png</file>
         <file>D:/DS Project Stuff/Images/star.png</file>
