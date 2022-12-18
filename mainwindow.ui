@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -46,7 +46,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -359,7 +359,7 @@ background-color: #ff6961;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3right.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -402,7 +402,7 @@ background-color: #ff6961;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3left.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -445,7 +445,7 @@ background-color: #ff6961;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3left.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -488,7 +488,7 @@ background-color: #ff6961;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -625,7 +625,7 @@ background-color: green;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3left.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -796,7 +796,7 @@ background-color: red;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>false</bool>
@@ -897,7 +897,7 @@ border-radius:30px;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3right.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1001,7 +1001,7 @@ border-radius:30px;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3arrow.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrow.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1044,7 +1044,7 @@ border-radius:30px;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3left.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1151,7 +1151,7 @@ background-color: green;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3right.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1258,7 +1258,7 @@ background-color: red;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3right.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1301,7 +1301,7 @@ background-color: red;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/vw3arrowleft.png</pixmap>
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrowleft.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1413,7 +1413,7 @@ background-color: green;
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/star.png</pixmap>
+       <pixmap>:/E:/DS Project Stuff/Images/star.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1601,7 +1601,7 @@ background-color: rgb(27, 177, 152);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/star.png</pixmap>
+       <pixmap>:/E:/DS Project Stuff/Images/star.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1620,7 +1620,7 @@ background-color: rgb(27, 177, 152);
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/E:/DS Project Stuff/Images/star.png</pixmap>
+       <pixmap>:/E:/DS Project Stuff/Images/star.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>

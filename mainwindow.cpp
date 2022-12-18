@@ -62,9 +62,9 @@ void MainWindow::on_startgame_button_pressed()
     ui->minus_5->setEnabled(true);
     ui->plus_10->setEnabled(true);
     ui->startgame_button->setEnabled(false);
- QPixmap greenvertical("E:/DS Project Stuff/Images/vwgreen.png");
- QPixmap greenleft("E:/DS Project Stuff/Images/vw3leftgreen.png");
- QPixmap greenright("E:/DS Project Stuff/Images/vw3rightgreen.png");
+ QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
+ QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+ QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
     ui->line10->setPixmap(greenleft);
     ui->line11->setPixmap(greenvertical);
     ui->line12->setPixmap(greenright);
@@ -86,10 +86,10 @@ void MainWindow::on_plus_6_pressed()
     buttonsfx->play();
     money += 6;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)));
-    QPixmap normalvertical("E:/DS Project Stuff/Images/vw.png");
-    QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
-    QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
-     QPixmap greenright("E:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+     QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
     ui->line10->setPixmap(normalleft);
     ui->line11->setPixmap(normalvertical);
     ui->line12->setPixmap(normalright);
@@ -112,10 +112,10 @@ void MainWindow::on_minus_5_pressed()
     buttonsfx->play();
     money -= 5;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-    QPixmap normalvertical("E:/DS Project Stuff/Images/vw.png");
-    QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
-    QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
-    QPixmap greenvertical("E:/DS Project Stuff/Images/vwgreen.png");
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
     ui->line10->setPixmap(normalleft);
     ui->line11->setPixmap(normalvertical);
     ui->line12->setPixmap(normalright);
@@ -136,10 +136,10 @@ void MainWindow::on_plus_10_pressed()
     buttonsfx->play();
     money += 10;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-    QPixmap normalvertical("E:/DS Project Stuff/Images/vw.png");
-    QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
-    QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
-    QPixmap greenleft("E:/DS Project Stuff/Images/vw3leftgreen.png");
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
     ui->line10->setPixmap(normalleft);
     ui->line11->setPixmap(normalvertical);
     ui->line12->setPixmap(normalright);
@@ -159,11 +159,11 @@ void MainWindow::on_minus_9_pressed()
     buttonsfx->play();
     money -= 9;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-    QPixmap normalvertical("E:/DS Project Stuff/Images/vw.png");
-    QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
-    QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
-    QPixmap greenleft("E:/DS Project Stuff/Images/vw3leftgreen.png");
-    QPixmap greenright("E:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
     if(plus6){ui->line1->setPixmap(normalright);}
     else if(minus5){ui->line2->setPixmap(normalvertical);}
     else if(plus10){ui->line3->setPixmap(normalleft);}
@@ -180,11 +180,11 @@ void MainWindow::on_plus_7_pressed()
      buttonsfx->play();
       money += 7;
       ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-       QPixmap greenarrowright("E:/DS Project Stuff/Images/vw3arrowgreen.png");
-        QPixmap normalarrowleft("E:/DS Project Stuff/Images/vw3arrowleft.png");
-         QPixmap greenright("E:/DS Project Stuff/Images/vw3rightgreen.png");
-          QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
-           QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
+       QPixmap greenarrowright("D:/DS Project Stuff/Images/vw3arrowgreen.png");
+        QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
+         QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+          QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+           QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
           ui->line4->setPixmap(normalleft);
           ui->line5->setPixmap(normalright);
         plus7=true;
@@ -209,11 +209,11 @@ void MainWindow::on_minus_20_pressed()
          buttonsfx->play();
          money -= 20;
          ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-         QPixmap greenarrowleft("E:/DS Project Stuff/Images/vw3arrowleftgreen.png");
-          QPixmap greenleft("E:/DS Project Stuff/Images/vw3leftgreen.png");
-          QPixmap normalarrowright("E:/DS Project Stuff/Images/vw3arrow.png");
-          QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
-          QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
+         QPixmap greenarrowleft("D:/DS Project Stuff/Images/vw3arrowleftgreen.png");
+          QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+          QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
+          QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+          QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
           ui->line4->setPixmap(normalleft);
           ui->line5->setPixmap(normalright);
           if(plus7)
@@ -234,20 +234,20 @@ void MainWindow::setStars()
 {
     if(money >= 70)
     {
-        QPixmap greenstar("E:/DS Project Stuff/Images/stargreen.png");
+        QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
         ui->star2->setPixmap(greenstar);
         ui->star3->setPixmap(greenstar);
     }
     else if ((money < 70) && (money > 40))
     {
-        QPixmap greenstar("E:/DS Project Stuff/Images/stargreen.png");
+        QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
         ui->star2->setPixmap(greenstar);
     }
     else if ( money < 40 && money >= 0)
     {
-        QPixmap greenstar("E:/DS Project Stuff/Images/stargreen.png");
+        QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
     }
 }
@@ -264,11 +264,11 @@ void MainWindow::on_finishButton_pressed()
     ui->minus_20->setEnabled(false);
     ui->plus_7->setEnabled(false);
 
-    QPixmap normalarrowright("E:/DS Project Stuff/Images/vw3arrow.png");
-    QPixmap normalright("E:/DS Project Stuff/Images/vw3right.png");
-    QPixmap normalleft("E:/DS Project Stuff/Images/vw3left.png");
-    QPixmap normalarrowleft("E:/DS Project Stuff/Images/vw3arrowleft.png");
-    QPixmap normalvertical("E:/DS Project Stuff/Images/vw.png");
+    QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     ui->line1->setPixmap(normalright);
     ui->line2->setPixmap(normalvertical);
     ui->line3->setPixmap(normalleft);
