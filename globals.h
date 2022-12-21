@@ -2,8 +2,13 @@
 #define GLOBALS_H
 #include <QMediaPlayer>
 #include <QAudioOutput>
+#include <queue>
+#include <list>
+
+
 
 extern int money;
+
 extern QMediaPlayer * music;
 extern QAudioOutput * musicoutput;
 

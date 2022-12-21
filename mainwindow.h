@@ -20,17 +20,17 @@ private slots:
 
     void on_startgame_button_pressed();
 
-    void on_plus_6_pressed();
+    void on_button_1_pressed();
 
-    void on_minus_5_pressed();
+    void on_button_2_pressed();
 
-    void on_plus_10_pressed();
+    void on_button_3_pressed();
 
-    void on_minus_9_pressed();
+    void on_button_4_pressed();
 
-    void on_plus_7_pressed();
+    void on_button_5_pressed();
 
-    void on_minus_20_pressed();
+    void on_button_6_pressed();
 
     void on_menustart_button_pressed();
 

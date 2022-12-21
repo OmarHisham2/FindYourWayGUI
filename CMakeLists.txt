@@ -22,6 +22,10 @@ set(PROJECT_SOURCES
         mainwindow.ui
         globals.h
         resources.qrc
+        Graph.cpp
+        Graph.h
+        GraphTest.cpp
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

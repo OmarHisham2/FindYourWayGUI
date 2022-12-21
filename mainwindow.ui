@@ -530,7 +530,7 @@ color: rgb(255, 255, 255);
        <string>Money : 100</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="plus_6">
+     <widget class="QPushButton" name="button_1">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -637,7 +637,7 @@ background-color: green;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="minus_9">
+     <widget class="QPushButton" name="button_4">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -701,7 +701,7 @@ background-color: red;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="minus_5">
+     <widget class="QPushButton" name="button_2">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1056,7 +1056,7 @@ border-radius:30px;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="plus_7">
+     <widget class="QPushButton" name="button_5">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1163,7 +1163,7 @@ background-color: green;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="minus_20">
+     <widget class="QPushButton" name="button_6">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1313,7 +1313,7 @@ background-color: red;
        <bool>false</bool>
       </property>
      </widget>
-     <widget class="QPushButton" name="plus_10">
+     <widget class="QPushButton" name="button_3">
       <property name="enabled">
        <bool>false</bool>
       </property>
@@ -1387,16 +1387,16 @@ background-color: green;
      <zorder>line8</zorder>
      <zorder>line7</zorder>
      <zorder>line3</zorder>
-     <zorder>plus_7</zorder>
+     <zorder>button_5</zorder>
      <zorder>line12</zorder>
      <zorder>line5</zorder>
      <zorder>line6</zorder>
-     <zorder>plus_10</zorder>
-     <zorder>minus_20</zorder>
-     <zorder>minus_9</zorder>
-     <zorder>plus_6</zorder>
+     <zorder>button_3</zorder>
+     <zorder>button_6</zorder>
+     <zorder>button_4</zorder>
+     <zorder>button_1</zorder>
      <zorder>finishButton</zorder>
-     <zorder>minus_5</zorder>
+     <zorder>button_2</zorder>
      <zorder>startgame_button</zorder>
     </widget>
     <widget class="QWidget" name="page3">
