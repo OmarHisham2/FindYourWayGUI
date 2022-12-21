@@ -17,6 +17,7 @@
 
 int money = 999;
 int weight1,weight2,weight3,weight4,weight5,weight6;
+int t4_1,t4_2,t4_3;
 
 
 
@@ -42,27 +43,31 @@ MainWindow::MainWindow(QWidget *parent)
     while(!valid)
     {
     vector<Edge> edges;
-    edges.push_back({ 0, 1, 5 });
-    edges.push_back({ 0, 2, 7});
-    edges.push_back({ 0, 3, 2});
-    edges.push_back({ 1, 3, -2});
-    edges.push_back({ 2, 3, -1});
-    edges.push_back({ 3, 4, 3});
-    edges.push_back({ 3, 5, 8});
-    edges.push_back({ 4, 5, 1});
-    edges.push_back({ 5, 4, -1});
+    edges.push_back({ 0, 1, });
+    edges.push_back({ 0, 2, });
+    edges.push_back({ 0, 3, });
+    edges.push_back({ 1, 3, });
+    edges.push_back({ 2, 3, });
+    edges.push_back({ 3, 4, });
+    edges.push_back({ 3, 5, });
+    edges.push_back({ 4, 5, });
+    edges.push_back({ 5, 4, });
 
 
     // construct graph
     Graph graphEasy(edges, 6);
     graphEasy.generateRandomWeights();
+    auto j = graphEasy.adjList[0].begin();
+    weight1=j->second;  j++;
+    weight2=j->second;  j++;
+    weight3=j->second;
+    t4_1=graphEasy.adjList[1].begin()->second;
+    t4_2=graphEasy.adjList[2].begin()->second;
+    t4_3=graphEasy.adjList[3].begin()->second;
+    auto i = graphEasy.adjList[3].begin();
+    weight5=i->second;  i++;
+    weight6=i->second;
 
-     weight1 =graphEasy.adjList[0].front().second;
-     weight2 =graphEasy.adjList[1].front().second;
-     weight3 =graphEasy.adjList[2].front().second;
-     weight4 =graphEasy.adjList[3].front().second;
-     weight5 =graphEasy.adjList[4].front().second;
-     weight6 =graphEasy.adjList[5].front().second;
 
     money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
 
@@ -116,7 +121,7 @@ void MainWindow::on_easy_button_pressed()
     ui->button_1->setText(QString(" ").append(QString::number(weight1)));
     ui->button_2->setText(QString(" ").append(QString::number(weight2)));
     ui->button_3->setText(QString(" ").append(QString::number(weight3)));
-    ui->button_4->setText(QString(" ").append(QString::number(weight4)));
+
     ui->button_5->setText(QString(" ").append(QString::number(weight5)));
     ui->button_6->setText(QString(" ").append(QString::number(weight6)));
 
@@ -166,7 +171,8 @@ void MainWindow::on_button_1_pressed()
     ui->line12->setPixmap(normalright);
     ui->line1->setPixmap(greenright);
     plus6=true;
-
+    weight4=t4_1;
+    ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 
 }
 
@@ -195,6 +201,8 @@ void MainWindow::on_button_2_pressed()
     ui->line12->setPixmap(normalright);
     ui->line2->setPixmap(greenvertical);
     minus5=true;
+    weight4=t4_2;
+    ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
 
 
@@ -222,6 +230,8 @@ void MainWindow::on_button_3_pressed()
     ui->line12->setPixmap(normalright);
     ui->line3->setPixmap(greenleft);
      plus10=true;
+     weight4=t4_3;
+     ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
 
 

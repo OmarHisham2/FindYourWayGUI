@@ -692,7 +692,7 @@ background-color: red;
 </string>
       </property>
       <property name="text">
-       <string>-9</string>
+       <string>???</string>
       </property>
       <property name="checkable">
        <bool>false</bool>
