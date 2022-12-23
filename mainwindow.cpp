@@ -16,9 +16,8 @@
 
 
 int money = 999;
-int weight1,weight2,weight3,weight4,weight5,weight6;
+int E_weight0_1,E_weight0_2,E_weight0_3,E_weight1_3,E_weight2_3,E_weight3_4,E_weight3_5,E_weight4_5,E_weight5_4;
 int t4_1,t4_2,t4_3;
-int weight1_4, weight2_4, weight3_4,weight6_5,weight5_6;
 
 
 
@@ -39,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
+    // construct EASY graph BEGIN
     bool valid = false;
     while(!valid)
     {
@@ -55,26 +55,20 @@ MainWindow::MainWindow(QWidget *parent)
     edges.push_back({ 6, 5, });
 
 
-    // construct graph
+
     Graph graphEasy(edges, 7);
     graphEasy.generateRandomWeights();
-    graphEasy.printGraph();
     auto j = graphEasy.adjList[0].begin();
 
-    weight1= j->second;  j++;
-    weight2= j->second;  j++;
-    weight3= j->second;
-    t4_1=graphEasy.adjList[1].begin()->second;
-    t4_2=graphEasy.adjList[2].begin()->second;
-    t4_3=graphEasy.adjList[3].begin()->second;
-    weight1_4 = (graphEasy.adjList[1].begin())->second;
-    weight2_4 = (graphEasy.adjList[2].begin())->second;
-    weight3_4 = (graphEasy.adjList[3].begin())->second;
+    E_weight0_1= j->second;  j++;
+    E_weight0_2= j->second;  j++;
+    E_weight0_3= j->second;
+    E_weight1_3 = (graphEasy.adjList[1].begin())->second;
+    E_weight2_3 = (graphEasy.adjList[2].begin())->second;
+    E_weight3_4 = (graphEasy.adjList[3].begin())->second;
     auto i = graphEasy.adjList[4].begin();
-    weight5= i->second;  i++;
-    weight6= i->second;
-    weight5_6 = (graphEasy.adjList[5].begin())->second;
-    weight6_5 = (graphEasy.adjList[6].begin())->second;
+    E_weight4_5= i->second;  i++;
+    E_weight5_4 = (graphEasy.adjList[5].begin())->second;
 
 
     money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
@@ -87,6 +81,7 @@ MainWindow::MainWindow(QWidget *parent)
         valid = true; //changed here
 
     }
+// construct EASY graph END
 
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
@@ -116,12 +111,15 @@ void MainWindow::on_menustart_button_pressed()
 void MainWindow::on_easy_button_pressed()
 {
 
-
-    ui->label_1->setText(QString(" ").append(QString::number(-weight1_4)));
-    ui->label_2->setText(QString(" ").append(QString::number(-weight2_4)));
-    ui->label_3->setText(QString(" ").append(QString::number(-weight3_4)));
-    ui->label_4->setText(QString(" ").append(QString::number(-weight6_5)));
-    ui->label_5->setText(QString(" ").append(QString::number(-weight5_6)));
+    ui->label_1->setText(QString(" ").append(QString::number(-E_weight0_1)));
+    ui->label_2->setText(QString(" ").append(QString::number(-E_weight0_3)));
+    ui->label_3->setText(QString(" ").append(QString::number(-E_weight0_2)));
+    ui->label_4->setText(QString(" ").append(QString::number(-E_weight1_3)));
+    ui->label_5->setText(QString(" ").append(QString::number(-E_weight2_3)));
+    ui->label_6->setText(QString(" ").append(QString::number(-E_weight3_4)));
+    ui->label_7->setText(QString(" ").append(QString::number(-E_weight3_5)));
+    ui->label_8->setText(QString(" ").append(QString::number(-E_weight5_4)));
+    ui->label_9->setText(QString(" ").append(QString::number(-E_weight4_5)));
 
 
 
@@ -134,12 +132,6 @@ void MainWindow::on_easy_button_pressed()
     ui->stackedWidget->setCurrentIndex(2);
     ui->finishButton->setEnabled(false);
     ui->money_label->setText(QString("Money : ").append(QString::number(money)));
-    ui->button_1->setText(QString(" ").append(QString::number(-weight1)));
-    ui->button_2->setText(QString(" ").append(QString::number(-weight2)));
-    ui->button_3->setText(QString(" ").append(QString::number(-weight3)));
-
-    ui->button_5->setText(QString(" ").append(QString::number(-weight5)));
-    ui->button_6->setText(QString(" ").append(QString::number(-weight6)));
 
 }
 
@@ -166,10 +158,9 @@ void MainWindow::on_button_1_pressed()
 {
 
     ui->button_1->setEnabled(false);
-    ui->button_3->setEnabled(false);
+    ui->button_3->setEnabled(true);
     ui->button_2->setEnabled(false);
-    ui->button_4->setEnabled(true);
-    if (weight1 >= 0)
+    if (E_weight0_1 >= 0)
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
         else
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
@@ -177,7 +168,7 @@ void MainWindow::on_button_1_pressed()
     leveloutput->setVolume(0.8);
     buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));
     buttonsfx->play();
-    money -= weight1;
+    money -= E_weight0_1;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)));
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -189,7 +180,6 @@ void MainWindow::on_button_1_pressed()
     ui->line1->setPixmap(greenright);
     plus6=true;
    // weight4=t4_1;
-    weight4 = weight1_4;
     //ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 
 }
@@ -198,47 +188,17 @@ void MainWindow::on_button_1_pressed()
 void MainWindow::on_button_2_pressed()
 {
     ui->button_1->setEnabled(false);
-    ui->button_3->setEnabled(false);
+    ui->button_3->setEnabled(true);
     ui->button_2->setEnabled(false);
-    ui->button_4->setEnabled(true);
-    if (weight2 >= 0)
+
+    if (E_weight0_2 >= 0)
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
         else
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
     buttonsfx->setAudioOutput(leveloutput);
     leveloutput->setVolume(0.8);
     buttonsfx->play();
-    money -= weight2;
-    ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
-    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
-    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-    QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
-    ui->line10->setPixmap(normalleft);
-    ui->line11->setPixmap(normalvertical);
-    ui->line12->setPixmap(normalright);
-    ui->line2->setPixmap(greenvertical);
-    minus5=true;
-   //weight4=t4_2;
-    weight4 = weight2_4;
-   // ui->button_4->setText(QString(" ").append(QString::number(weight4)));
-}
-
-
-void MainWindow::on_button_3_pressed()
-{
-    if (weight3 >= 0)
-    {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
-        else
-    {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
-    ui->button_1->setEnabled(false);
-    ui->button_3->setEnabled(false);
-    ui->button_2->setEnabled(false);
-    ui->button_4->setEnabled(true);
-    buttonsfx->setAudioOutput(leveloutput);
-    leveloutput->setVolume(0.8);
-    buttonsfx->play();
-    money -= weight3;
+    money -= E_weight0_2;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -248,8 +208,40 @@ void MainWindow::on_button_3_pressed()
     ui->line11->setPixmap(normalvertical);
     ui->line12->setPixmap(normalright);
     ui->line3->setPixmap(greenleft);
+    minus5=true;
+   //weight4=t4_2;
+   // ui->button_4->setText(QString(" ").append(QString::number(weight4)));
+}
+
+
+void MainWindow::on_button_3_pressed()
+{
+    if (E_weight0_3 >= 0)
+    {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
+        else
+    {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
+    ui->button_1->setEnabled(false);
+    ui->button_3->setEnabled(false);
+    ui->button_2->setEnabled(false);
+    ui->button_4->setEnabled(true);
+    ui->button_5->setEnabled(true);
+    buttonsfx->setAudioOutput(leveloutput);
+    leveloutput->setVolume(0.8);
+    buttonsfx->play();
+    money -= E_weight0_3;
+    ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+    ui->line10->setPixmap(normalleft);
+    ui->line11->setPixmap(normalvertical);
+    ui->line12->setPixmap(normalright);
+    ui->line3->setPixmap(normalleft);
+    ui->line4->setPixmap(greenleft);
+    ui->line5->setPixmap(greenright);
      plus10=true;
-     weight4 = weight3_4;
      //weight4=t4_3;
      //ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
@@ -258,36 +250,42 @@ void MainWindow::on_button_3_pressed()
 void MainWindow::on_button_4_pressed()
 {
     but4=1;
-    if (weight4 >= 0)
+    if (E_weight3_4 >= 0)
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
         else
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
     ui->button_4->setEnabled(false);
     ui->button_5->setEnabled(true);
-    ui->button_6->setEnabled(true);
+    ui->finishButton->setEnabled(true);
     buttonsfx->setAudioOutput(leveloutput);
     leveloutput->setVolume(0.8);
     buttonsfx->play();
-    money -= weight4;
+    money -= E_weight3_4;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap greenarrowright("D:/DS Project Stuff/Images/vw3arrowgreen.png");
+    QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
     QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
     QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
     if(plus6){ui->line1->setPixmap(normalright);}
-    else if(minus5){ui->line2->setPixmap(normalvertical);}
+    else if(minus5){ui->line11->setPixmap(normalvertical);}
     else if(plus10){ui->line3->setPixmap(normalleft);}
-    ui->line4->setPixmap(greenleft);
-    ui->line5->setPixmap(greenright);
+    ui->line7->setPixmap(greenarrowright);
+    ui->line8->setPixmap(greenright);
+    ui->line4->setPixmap(normalleft);
+    ui->line5->setPixmap(normalright);
+    ui->line9->setPixmap(normalleft);
+    ui->line6->setPixmap(normalarrowleft);
 }
 
 
 void MainWindow::on_button_5_pressed()
 {
 
+    ui->button_4->setEnabled(true);
     ui->finishButton->setEnabled(true);
-     if (weight5 >= 0)
+     if (E_weight3_5 >= 0)
      {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
          else
      {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
@@ -296,15 +294,16 @@ void MainWindow::on_button_5_pressed()
 
      buttonsfx->play();
      if(but4){
-         money -= weight5;
+         money -= E_weight3_5;
      }else{
-         money -= weight6_5;
+         money -= E_weight3_5;
      }
      but4=0;
       ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-       QPixmap greenarrowright("D:/DS Project Stuff/Images/vw3arrowgreen.png");
+       QPixmap greenarrowleft("D:/DS Project Stuff/Images/vw3arrowleftgreen.png");
         QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
-         QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+        QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
+         QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
           QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
            QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
           ui->line4->setPixmap(normalleft);
@@ -315,50 +314,17 @@ void MainWindow::on_button_5_pressed()
                ui->line6->setPixmap(normalarrowleft);
                ui->line9->setPixmap(normalleft);
            }
-            ui->line7->setPixmap(greenarrowright);
-            ui->line8->setPixmap(greenright);
-             ui->button_6->setEnabled(true);
+
+             ui->finishButton->setEnabled(true);
               ui->button_5->setEnabled(false);
-}
-
-
-void MainWindow::on_button_6_pressed()
-{
-    ui->finishButton->setEnabled(true);
-    if (weight1 >= 0)
-    {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
-        else
-    {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/minus.mp3"));}
-         buttonsfx->setAudioOutput(leveloutput);
-         leveloutput->setVolume(0.8);
-         buttonsfx->play();
-         if(but4){
-             money -= weight6;
-         }else{
-             money -= weight5_6;
-         }
-         but4=0;
-
-         ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
-         QPixmap greenarrowleft("D:/DS Project Stuff/Images/vw3arrowleftgreen.png");
-          QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
-          QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
-          QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-          QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
-          ui->line4->setPixmap(normalleft);
-          ui->line5->setPixmap(normalright);
-          if(plus7)
-          {
-              ui->line7->setPixmap(normalarrowright);
+              ui->line4->setPixmap(normalleft);
+              ui->line5->setPixmap(normalright);
+              ui->line9->setPixmap(greenleft);
+              ui->line6->setPixmap(greenarrowleft);
               ui->line8->setPixmap(normalright);
-          }
-         ui->line6->setPixmap(greenarrowleft);
-         ui->line9->setPixmap(greenleft);
-         minus20=true;
-         ui->button_6->setEnabled(false);
-         ui->button_5->setEnabled(true);
-}
+              ui->line7->setPixmap(normalarrowright);
 
+}
 
 
 void MainWindow::setStars()
@@ -392,7 +358,7 @@ void MainWindow::on_finishButton_pressed()
     buttonsfx->play();
     setStars();
     ui->finishButton->setEnabled(false);
-    ui->button_6->setEnabled(false);
+  //  ui->button_6->setEnabled(false);
     ui->button_5->setEnabled(false);
 
     QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
@@ -401,7 +367,7 @@ void MainWindow::on_finishButton_pressed()
     QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     ui->line1->setPixmap(normalright);
-    ui->line2->setPixmap(normalvertical);
+    ui->line11->setPixmap(normalvertical);
     ui->line3->setPixmap(normalleft);
     ui->line6->setPixmap(normalarrowleft);
     ui->line7->setPixmap(normalarrowright);
@@ -433,29 +399,29 @@ void MainWindow::on_retry_button_pressed()
     ui->stackedWidget->setCurrentIndex(2);
     //delete after test
 
-    ui->label_1->setText(QString(" ").append(QString::number(-weight1_4)));
-    ui->label_2->setText(QString(" ").append(QString::number(-weight2_4)));
-    ui->label_3->setText(QString(" ").append(QString::number(-weight3_4)));
-    ui->label_4->setText(QString(" ").append(QString::number(-weight6_5)));
-    ui->label_5->setText(QString(" ").append(QString::number(-weight5_6)));
+//    ui->label_4->setText(QString(" ").append(QString::number(-weight1_4)));
+//    ui->label_5->setText(QString(" ").append(QString::number(-E_weight0_2_4)));
+//    ui->label_6->setText(QString(" ").append(QString::number(-E_weight0_3_4)));
+//    ui->label_4->setText(QString(" ").append(QString::number(-weight6_5)));
+//    ui->label_5->setText(QString(" ").append(QString::number(-weight5_6)));
 
 
 
 
 
-    music->setAudioOutput(musicoutput);
-    musicoutput->setVolume(0.8);
-    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/Select.mp3"));
-    music->play();
-    ui->stackedWidget->setCurrentIndex(2);
-    ui->finishButton->setEnabled(false);
-    ui->money_label->setText(QString("Money : ").append(QString::number(money)));
-    ui->button_1->setText(QString(" ").append(QString::number(-weight1)));
-    ui->button_2->setText(QString(" ").append(QString::number(-weight2)));
-    ui->button_3->setText(QString(" ").append(QString::number(-weight3)));
+//    music->setAudioOutput(musicoutput);
+//    musicoutput->setVolume(0.8);
+//    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/Select.mp3"));
+//    music->play();
+//    ui->stackedWidget->setCurrentIndex(2);
+//    ui->finishButton->setEnabled(false);
+//    ui->money_label->setText(QString("Money : ").append(QString::number(money)));
+//    ui->button_1->setText(QString(" ").append(QString::number(-weight1)));
+//    ui->button_2->setText(QString(" ").append(QString::number(-E_weight0_2)));
+//    ui->button_3->setText(QString(" ").append(QString::number(-E_weight0_3)));
 
-    ui->button_5->setText(QString(" ").append(QString::number(-weight5)));
-    ui->button_6->setText(QString(" ").append(QString::number(-weight6)));
+//    ui->button_5->setText(QString(" ").append(QString::number(-weight5)));
+//    ui->button_6->setText(QString(" ").append(QString::number(-weight6)));
 
 
 
@@ -489,5 +455,11 @@ void MainWindow::on_return_button_pressed()
 void MainWindow::on_menuexit_button_pressed()
 {
     this->close();
+}
+
+
+void MainWindow::on_medium_button_pressed()
+{
+    ui->stackedWidget->setCurrentIndex(4);
 }
 

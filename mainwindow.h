@@ -30,8 +30,6 @@ private slots:
 
     void on_button_5_pressed();
 
-    void on_button_6_pressed();
-
     void on_menustart_button_pressed();
 
     void on_easy_button_pressed();
@@ -45,6 +43,8 @@ private slots:
     void on_return_button_pressed();
 
     void on_menuexit_button_pressed();
+
+    void on_medium_button_pressed();
 
 private:
     Ui::MainWindow *ui;
