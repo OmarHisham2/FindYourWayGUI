@@ -18,11 +18,11 @@
 int money = 999;
 int weight1,weight2,weight3,weight4,weight5,weight6;
 int t4_1,t4_2,t4_3;
+int weight1_4, weight2_4, weight3_4,weight6_5,weight5_6;
 
 
 
-
-
+bool but4,but5,but6;
 
 
 
@@ -46,37 +46,45 @@ MainWindow::MainWindow(QWidget *parent)
     edges.push_back({ 0, 1, });
     edges.push_back({ 0, 2, });
     edges.push_back({ 0, 3, });
-    edges.push_back({ 1, 3, });
-    edges.push_back({ 2, 3, });
+    edges.push_back({ 1, 4, });
+    edges.push_back({ 2, 4, });
     edges.push_back({ 3, 4, });
-    edges.push_back({ 3, 5, });
     edges.push_back({ 4, 5, });
-    edges.push_back({ 5, 4, });
+    edges.push_back({ 4, 6, });
+    edges.push_back({ 5, 6, });
+    edges.push_back({ 6, 5, });
 
 
     // construct graph
-    Graph graphEasy(edges, 6);
+    Graph graphEasy(edges, 7);
     graphEasy.generateRandomWeights();
+    graphEasy.printGraph();
     auto j = graphEasy.adjList[0].begin();
-    weight1=j->second;  j++;
-    weight2=j->second;  j++;
-    weight3=j->second;
+
+    weight1= j->second;  j++;
+    weight2= j->second;  j++;
+    weight3= j->second;
     t4_1=graphEasy.adjList[1].begin()->second;
     t4_2=graphEasy.adjList[2].begin()->second;
     t4_3=graphEasy.adjList[3].begin()->second;
-    auto i = graphEasy.adjList[3].begin();
-    weight5=i->second;  i++;
-    weight6=i->second;
+    weight1_4 = (graphEasy.adjList[1].begin())->second;
+    weight2_4 = (graphEasy.adjList[2].begin())->second;
+    weight3_4 = (graphEasy.adjList[3].begin())->second;
+    auto i = graphEasy.adjList[4].begin();
+    weight5= i->second;  i++;
+    weight6= i->second;
+    weight5_6 = (graphEasy.adjList[5].begin())->second;
+    weight6_5 = (graphEasy.adjList[6].begin())->second;
 
 
     money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
 
     if ( money <= 0 )
     {
-        valid = false;
+        valid = true;
     }
     else
-        valid = true;
+        valid = true; //changed here
 
     }
 
@@ -109,6 +117,14 @@ void MainWindow::on_easy_button_pressed()
 {
 
 
+    ui->label_1->setText(QString(" ").append(QString::number(-weight1_4)));
+    ui->label_2->setText(QString(" ").append(QString::number(-weight2_4)));
+    ui->label_3->setText(QString(" ").append(QString::number(-weight3_4)));
+    ui->label_4->setText(QString(" ").append(QString::number(-weight6_5)));
+    ui->label_5->setText(QString(" ").append(QString::number(-weight5_6)));
+
+
+
 
 
     music->setAudioOutput(musicoutput);
@@ -118,12 +134,12 @@ void MainWindow::on_easy_button_pressed()
     ui->stackedWidget->setCurrentIndex(2);
     ui->finishButton->setEnabled(false);
     ui->money_label->setText(QString("Money : ").append(QString::number(money)));
-    ui->button_1->setText(QString(" ").append(QString::number(weight1)));
-    ui->button_2->setText(QString(" ").append(QString::number(weight2)));
-    ui->button_3->setText(QString(" ").append(QString::number(weight3)));
+    ui->button_1->setText(QString(" ").append(QString::number(-weight1)));
+    ui->button_2->setText(QString(" ").append(QString::number(-weight2)));
+    ui->button_3->setText(QString(" ").append(QString::number(-weight3)));
 
-    ui->button_5->setText(QString(" ").append(QString::number(weight5)));
-    ui->button_6->setText(QString(" ").append(QString::number(weight6)));
+    ui->button_5->setText(QString(" ").append(QString::number(-weight5)));
+    ui->button_6->setText(QString(" ").append(QString::number(-weight6)));
 
 }
 
@@ -148,6 +164,7 @@ void MainWindow::on_startgame_button_pressed()
 
 void MainWindow::on_button_1_pressed()
 {
+
     ui->button_1->setEnabled(false);
     ui->button_3->setEnabled(false);
     ui->button_2->setEnabled(false);
@@ -160,7 +177,7 @@ void MainWindow::on_button_1_pressed()
     leveloutput->setVolume(0.8);
     buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));
     buttonsfx->play();
-    money += weight1;
+    money -= weight1;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)));
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -171,8 +188,9 @@ void MainWindow::on_button_1_pressed()
     ui->line12->setPixmap(normalright);
     ui->line1->setPixmap(greenright);
     plus6=true;
-    weight4=t4_1;
-    ui->button_4->setText(QString(" ").append(QString::number(weight4)));
+   // weight4=t4_1;
+    weight4 = weight1_4;
+    //ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 
 }
 
@@ -190,7 +208,7 @@ void MainWindow::on_button_2_pressed()
     buttonsfx->setAudioOutput(leveloutput);
     leveloutput->setVolume(0.8);
     buttonsfx->play();
-    money += weight2;
+    money -= weight2;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -201,8 +219,9 @@ void MainWindow::on_button_2_pressed()
     ui->line12->setPixmap(normalright);
     ui->line2->setPixmap(greenvertical);
     minus5=true;
-    weight4=t4_2;
-    ui->button_4->setText(QString(" ").append(QString::number(weight4)));
+   //weight4=t4_2;
+    weight4 = weight2_4;
+   // ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
 
 
@@ -219,7 +238,7 @@ void MainWindow::on_button_3_pressed()
     buttonsfx->setAudioOutput(leveloutput);
     leveloutput->setVolume(0.8);
     buttonsfx->play();
-    money += weight3;
+    money -= weight3;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -230,13 +249,15 @@ void MainWindow::on_button_3_pressed()
     ui->line12->setPixmap(normalright);
     ui->line3->setPixmap(greenleft);
      plus10=true;
-     weight4=t4_3;
-     ui->button_4->setText(QString(" ").append(QString::number(weight4)));
+     weight4 = weight3_4;
+     //weight4=t4_3;
+     //ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
 
 
 void MainWindow::on_button_4_pressed()
 {
+    but4=1;
     if (weight4 >= 0)
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
         else
@@ -247,7 +268,7 @@ void MainWindow::on_button_4_pressed()
     buttonsfx->setAudioOutput(leveloutput);
     leveloutput->setVolume(0.8);
     buttonsfx->play();
-    money += weight4;
+    money -= weight4;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -263,8 +284,9 @@ void MainWindow::on_button_4_pressed()
 
 
 void MainWindow::on_button_5_pressed()
-{    ui->finishButton->setEnabled(true);
+{
 
+    ui->finishButton->setEnabled(true);
      if (weight5 >= 0)
      {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
          else
@@ -273,7 +295,12 @@ void MainWindow::on_button_5_pressed()
      leveloutput->setVolume(0.8);
 
      buttonsfx->play();
-      money += weight5;
+     if(but4){
+         money -= weight5;
+     }else{
+         money -= weight6_5;
+     }
+     but4=0;
       ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
        QPixmap greenarrowright("D:/DS Project Stuff/Images/vw3arrowgreen.png");
         QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
@@ -305,7 +332,13 @@ void MainWindow::on_button_6_pressed()
          buttonsfx->setAudioOutput(leveloutput);
          leveloutput->setVolume(0.8);
          buttonsfx->play();
-         money += weight6;
+         if(but4){
+             money -= weight6;
+         }else{
+             money -= weight5_6;
+         }
+         but4=0;
+
          ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
          QPixmap greenarrowleft("D:/DS Project Stuff/Images/vw3arrowleftgreen.png");
           QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
@@ -398,6 +431,45 @@ void MainWindow::on_retry_button_pressed()
     money=100;
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     ui->stackedWidget->setCurrentIndex(2);
+    //delete after test
+
+    ui->label_1->setText(QString(" ").append(QString::number(-weight1_4)));
+    ui->label_2->setText(QString(" ").append(QString::number(-weight2_4)));
+    ui->label_3->setText(QString(" ").append(QString::number(-weight3_4)));
+    ui->label_4->setText(QString(" ").append(QString::number(-weight6_5)));
+    ui->label_5->setText(QString(" ").append(QString::number(-weight5_6)));
+
+
+
+
+
+    music->setAudioOutput(musicoutput);
+    musicoutput->setVolume(0.8);
+    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/Select.mp3"));
+    music->play();
+    ui->stackedWidget->setCurrentIndex(2);
+    ui->finishButton->setEnabled(false);
+    ui->money_label->setText(QString("Money : ").append(QString::number(money)));
+    ui->button_1->setText(QString(" ").append(QString::number(-weight1)));
+    ui->button_2->setText(QString(" ").append(QString::number(-weight2)));
+    ui->button_3->setText(QString(" ").append(QString::number(-weight3)));
+
+    ui->button_5->setText(QString(" ").append(QString::number(-weight5)));
+    ui->button_6->setText(QString(" ").append(QString::number(-weight6)));
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // end of delete
 
 }
 
