@@ -147,8 +147,8 @@ bool Graph::erase(int src, int dest)
 void Graph::generateRandomWeights()
 {
     srand(time(0));
-    int offset = -10;
-    int range = 40;
+    int offset = -10; //changed it form 10
+    int range = 40; //40
 
     for (int i = 0; i < adjList.size(); i++)
     {

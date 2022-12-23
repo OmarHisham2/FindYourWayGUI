@@ -46,6 +46,38 @@ private slots:
 
     void on_medium_button_pressed();
 
+
+
+    void on_M_startgame_button_pressed();
+
+    void on_M_button_1_pressed();
+
+    void on_M_button_4_pressed();
+
+    void on_M_button_5_pressed();
+
+    void on_M_button_2_pressed();
+
+    void on_M_button_3_pressed();
+
+
+
+    void on_M_button_6_pressed();
+
+    void on_M_button_7_pressed();
+
+    void on_M_button_8_pressed();
+
+    void on_M_button_9_pressed();
+
+    void on_M_button_10_pressed();
+
+    void on_M_button_11_pressed();
+
+    void on_M_button_12_pressed();
+
+    void on_M_finishButton_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -1,3 +1,4 @@
+#pragma once
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QMediaPlayer>
@@ -21,7 +22,7 @@ int t4_1,t4_2,t4_3;
 
 
 
-bool but4,but5,but6;
+bool ebut4;
 
 
 
@@ -38,7 +39,45 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
 
-    // construct EASY graph BEGIN
+// construct EASY graph END msh 3aref by3ml eh fa sebto
+
+    ui->setupUi(this);
+    ui->stackedWidget->setCurrentIndex(0);
+    QMediaPlayer * music = new QMediaPlayer();
+    QAudioOutput * output = new QAudioOutput();
+    music->setAudioOutput(output);
+    output->setVolume(0.2);
+    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/music/backgroundgame.mp3"));
+    music->play();
+
+// ---------------------------------------------
+
+
+
+
+
+
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::on_menustart_button_pressed()
+{
+    music->setAudioOutput(musicoutput);
+    musicoutput->setVolume(0.8);
+    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/Select.mp3"));
+    music->play();
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_easy_button_pressed()
+{
+
+
     bool valid = false;
     while(!valid)
     {
@@ -69,10 +108,7 @@ MainWindow::MainWindow(QWidget *parent)
     auto i = graphEasy.adjList[4].begin();
     E_weight4_5= i->second;  i++;
     E_weight5_4 = (graphEasy.adjList[5].begin())->second;
-
-
     money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
-
     if ( money <= 0 )
     {
         valid = true;
@@ -81,35 +117,6 @@ MainWindow::MainWindow(QWidget *parent)
         valid = true; //changed here
 
     }
-// construct EASY graph END
-
-    ui->setupUi(this);
-    ui->stackedWidget->setCurrentIndex(0);
-    QMediaPlayer * music = new QMediaPlayer();
-    QAudioOutput * output = new QAudioOutput();
-    music->setAudioOutput(output);
-    output->setVolume(0.2);
-    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/music/backgroundgame.mp3"));
-    music->play();
-}
-
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
-void MainWindow::on_menustart_button_pressed()
-{
-    music->setAudioOutput(musicoutput);
-    musicoutput->setVolume(0.8);
-    music->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/Select.mp3"));
-    music->play();
-    ui->stackedWidget->setCurrentIndex(1);
-}
-
-
-void MainWindow::on_easy_button_pressed()
-{
 
     ui->label_1->setText(QString(" ").append(QString::number(-E_weight0_1)));
     ui->label_2->setText(QString(" ").append(QString::number(-E_weight0_3)));
@@ -173,7 +180,7 @@ void MainWindow::on_button_1_pressed()
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
     QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-     QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
     ui->line10->setPixmap(normalleft);
     ui->line11->setPixmap(normalvertical);
     ui->line12->setPixmap(normalright);
@@ -249,7 +256,7 @@ void MainWindow::on_button_3_pressed()
 
 void MainWindow::on_button_4_pressed()
 {
-    but4=1;
+    ebut4=1;
     if (E_weight3_4 >= 0)
     {buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/plus.mp3"));}
         else
@@ -293,12 +300,12 @@ void MainWindow::on_button_5_pressed()
      leveloutput->setVolume(0.8);
 
      buttonsfx->play();
-     if(but4){
+     if(ebut4){
          money -= E_weight3_5;
      }else{
          money -= E_weight3_5;
      }
-     but4=0;
+     ebut4=0;
       ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
        QPixmap greenarrowleft("D:/DS Project Stuff/Images/vw3arrowleftgreen.png");
         QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
@@ -457,9 +464,7 @@ void MainWindow::on_menuexit_button_pressed()
     this->close();
 }
 
+//med graph *******************************************************
 
-void MainWindow::on_medium_button_pressed()
-{
-    ui->stackedWidget->setCurrentIndex(4);
-}
+
 

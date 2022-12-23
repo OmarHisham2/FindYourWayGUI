@@ -87,6 +87,15 @@ public:
         precondition:
         Postcondition :
     */
+    int get_weight(int src,int dest){
+        auto it = adjList[src].begin();
+        while(it!=adjList[src].end()){
+            if(it->first==dest){
+                return it->second;
+            }
+            it++;
+        }
+    }
 //    vector<Edge> easyEdges();
 public:
     // a vector of vectors of Pairs to represent an adjacency list
