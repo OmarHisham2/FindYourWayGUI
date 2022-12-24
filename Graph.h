@@ -69,7 +69,8 @@ public:
        Precondition:  None
        Postcondition: Random weights are generated for each node in the graph
      --------------------------------------------------------------------*/
-    void generateRandomWeights();
+    long int generateRandomWeights();
+    long int generateRandomWeights(long int s);
     /*--------------------------------------------------------------------
        Searches for the given weight in the graph's nodes
        Precondition:  None

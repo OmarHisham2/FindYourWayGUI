@@ -144,9 +144,10 @@ bool Graph::erase(int src, int dest)
     return false;
 }
 
-void Graph::generateRandomWeights()
+long int Graph::generateRandomWeights()
 {
-    srand(time(0));
+    long int level_seed = time(0);
+    srand(level_seed);
     int offset = -10; //changed it form 10
     int range = 40; //40
 
@@ -157,6 +158,23 @@ void Graph::generateRandomWeights()
             j->second = offset + (rand() % range);
         }
     }
+    return level_seed;
+}
+long int Graph::generateRandomWeights(long int s)
+{
+
+    srand(s);
+    int offset = -10; //changed it form 10
+    int range = 40; //40
+
+    for (int i = 0; i < adjList.size(); i++)
+    {
+        for (auto j = adjList[i].begin(); j != adjList[i].end(); j++)
+        {
+            j->second = offset + (rand() % range);
+        }
+    }
+    return s;
 }
 
 void Graph::searchWeight(int n)

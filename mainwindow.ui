@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -318,6 +318,49 @@ background-color: #ff6961;
       </property>
       <property name="text">
        <string>HARD</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="M_seed_button">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>580</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>36</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+}
+QPushButton:hover {
+background-color: #04AA6D;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>SEED</string>
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -4420,6 +4463,56 @@ color: rgb(255, 255, 255);
        <string>weight 0 to 1</string>
       </property>
      </widget>
+     <widget class="QLabel" name="M_seed_label">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>470</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>seed value</string>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::TextSelectableByMouse</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="M_copy_seed">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>570</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(91, 91, 91);</string>
+      </property>
+      <property name="text">
+       <string>COPY SEED</string>
+      </property>
+     </widget>
      <zorder>M_line5_3</zorder>
      <zorder>M_line0_1</zorder>
      <zorder>M_weight11_13</zorder>
@@ -4481,6 +4574,8 @@ color: rgb(255, 255, 255);
      <zorder>M_finishButton</zorder>
      <zorder>M_button_8</zorder>
      <zorder>M_money_label</zorder>
+     <zorder>M_seed_label</zorder>
+     <zorder>M_copy_seed</zorder>
     </widget>
    </widget>
   </widget>

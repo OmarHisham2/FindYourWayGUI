@@ -9,7 +9,9 @@
 #include "Graph.h"
 #include <queue>
 #include <list>
-
+#include <QClipboard>
+#include <QMessageBox>
+#include <QInputDialog>
 
 #define GREEN "color:#00FF00"
 #define WHITE "color:#FFFFFF"
@@ -21,8 +23,8 @@ vector<Edge> edges_med = { {0,1},{0,2},{1,4},{1,5},{2,1},{2,3},{2,4},{3,6},{3,8}
  };
 Graph med_graph(edges_med,14);
 bool from[15]={0};
-
-void update_from(int x){
+long int num;
+void update_from(long int x){
     for (int i =0;i<15;i++){
         from[i]=0;
     }
@@ -34,12 +36,62 @@ QString make_number(int x){
 }
 
 
+void MainWindow::on_M_seed_button_pressed()
+{
+    QInputDialog d;
+    d.setStyleSheet("color: blue;"
+                    "background-color: yellow;"
+                    "selection-color: yellow;"
+                    "selection-background-color: blue;");
+    //d.setAutoFillBackground(0);
+    d.exec();
+    QString st =  d.textValue(); //add
+    ui->stackedWidget->setCurrentIndex(4);
+    //med graph ********************************************************
+    ui->M_finishButton->setEnabled(0);
+    num = med_graph.generateRandomWeights(st.toLong());
+    ui->M_seed_label->setText(make_number(-num));
+    med_graph.printGraph();
+    money = med_graph.BellmanFordSP(0,13);
+    ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
+    ui->M_weight0_1->setText(make_number(med_graph.get_weight(0,1)));
+    ui->M_weight0_2->setText(make_number(med_graph.get_weight(0,2)));
+    ui->M_weight1_4->setText(make_number(med_graph.get_weight(1,4)));
+    ui->M_weight1_5->setText(make_number(med_graph.get_weight(1,5)));
+    ui->M_weight2_1->setText(make_number(med_graph.get_weight(2,1)));
+    ui->M_weight2_3->setText(make_number(med_graph.get_weight(2,3)));
+    ui->M_weight2_4->setText(make_number(med_graph.get_weight(2,4)));
+    ui->M_weight3_6->setText(make_number(med_graph.get_weight(3,6)));
+    ui->M_weight3_8->setText(make_number(med_graph.get_weight(3,8)));
+    ui->M_weight4_7->setText(make_number(med_graph.get_weight(4,7)));
+    ui->M_weight4_8->setText(make_number(med_graph.get_weight(4,8)));
+    ui->M_weight5_3->setText(make_number(med_graph.get_weight(5,3)));
+    ui->M_weight5_7->setText(make_number(med_graph.get_weight(5,7)));
+    ui->M_weight6_9->setText(make_number(med_graph.get_weight(6,9)));
+    ui->M_weight7_8->setText(make_number(med_graph.get_weight(7,8)));
+    ui->M_weight7_11->setText(make_number(med_graph.get_weight(7,11)));
+    ui->M_weight8_9->setText(make_number(med_graph.get_weight(8,9)));
+    ui->M_weight9_5->setText(make_number(med_graph.get_weight(9,5)));
+    ui->M_weight9_10->setText(make_number(med_graph.get_weight(9,10)));
+    ui->M_weight10_12->setText(make_number(med_graph.get_weight(10,12)));
+    ui->M_weight11_10->setText(make_number(med_graph.get_weight(11,10)));
+    ui->M_weight11_13->setText(make_number(med_graph.get_weight(11,13)));
+    ui->M_weight12_13->setText(make_number(med_graph.get_weight(12,13)));
+
+
+
+  //  QString text = d.getText(this,"Enter Seed","text");
+
+}
+
+
 void MainWindow::on_medium_button_pressed()
 {
     ui->stackedWidget->setCurrentIndex(4);
     //med graph ********************************************************
-
-    med_graph.generateRandomWeights();
+    ui->M_finishButton->setEnabled(0);
+    num = med_graph.generateRandomWeights();
+    ui->M_seed_label->setText(make_number(-num));
     med_graph.printGraph();
     money = med_graph.BellmanFordSP(0,13);
     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
@@ -76,6 +128,10 @@ void MainWindow::on_M_startgame_button_pressed()
     ui->M_button_1->setEnabled(true);
     ui->M_button_2->setEnabled(true);
     ui->M_startgame_button->setEnabled(0);
+    ui->M_finishButton->setEnabled(0);
+    ui->M_weight0_1->setStyleSheet(GREEN);
+    ui->M_weight0_2->setStyleSheet(GREEN);
+
 
 }
 void MainWindow::on_M_button_1_pressed()
@@ -85,6 +141,8 @@ void MainWindow::on_M_button_1_pressed()
     ui->M_weight2_4->setStyleSheet(WHITE);
     ui->M_weight1_5->setStyleSheet(GREEN);
     ui->M_weight1_4->setStyleSheet(GREEN);
+    ui->M_weight0_1->setStyleSheet(WHITE);
+    ui->M_weight0_2->setStyleSheet(WHITE);
     ui->M_startgame_button->setEnabled(false);
     ui->M_button_2->setEnabled(false);
     ui->M_button_3->setEnabled(false);
@@ -157,6 +215,8 @@ void MainWindow::on_M_button_2_pressed()
     ui->M_weight2_1->setStyleSheet(GREEN);
     ui->M_weight2_3->setStyleSheet(GREEN);
     ui->M_weight2_4->setStyleSheet(GREEN);
+    ui->M_weight0_1->setStyleSheet(WHITE);
+    ui->M_weight0_2->setStyleSheet(WHITE);
     ui->M_startgame_button->setEnabled(false);
     ui->M_button_2->setEnabled(false);
     ui->M_button_4->setEnabled(true);
@@ -220,6 +280,7 @@ void MainWindow::on_M_button_7_pressed()
     ui->M_button_7->setEnabled(false);
 
     ui->M_button_11->setEnabled(true);
+    ui->M_button_8->setEnabled(true);
 
     ui->M_weight4_7->setStyleSheet(WHITE);
     ui->M_weight4_8->setStyleSheet(WHITE);
@@ -227,6 +288,7 @@ void MainWindow::on_M_button_7_pressed()
     ui->M_weight5_3->setStyleSheet(WHITE);
 
     ui->M_weight7_11->setStyleSheet(GREEN);
+    ui->M_weight7_8->setStyleSheet(GREEN);
 
     if(from[4]){
         money -= med_graph.get_weight(4,7);
@@ -241,6 +303,7 @@ void MainWindow::on_M_button_8_pressed()
 {
     ui->M_button_3->setEnabled(false);
     ui->M_button_4->setEnabled(false);
+
     ui->M_button_6->setEnabled(false);
     ui->M_button_7->setEnabled(false);
     ui->M_button_11->setEnabled(false);
@@ -294,7 +357,7 @@ void MainWindow::on_M_button_9_pressed()
 void MainWindow::on_M_button_10_pressed()
 {
     ui->M_button_9->setEnabled(false);
-
+    ui->M_button_5->setEnabled(false);
     ui->M_button_11->setEnabled(false);
     ui->M_button_12->setEnabled(true);
     ui->M_finishButton->setEnabled(false);
@@ -302,6 +365,7 @@ void MainWindow::on_M_button_10_pressed()
 
     ui->M_weight11_10->setStyleSheet(WHITE);
     ui->M_weight11_13->setStyleSheet(WHITE);
+    ui->M_weight9_5->setStyleSheet(WHITE);
     ui->M_weight9_10->setStyleSheet(WHITE);
 
     ui->M_weight10_12->setStyleSheet(GREEN);
@@ -327,6 +391,7 @@ void MainWindow::on_M_button_11_pressed()
     ui->M_weight11_13->setStyleSheet(GREEN);
 
     ui->M_button_11->setEnabled(false);
+    ui->M_button_8->setEnabled(false);
     ui->M_button_10->setEnabled(true);
 
     ui->M_finishButton->setEnabled(true);
@@ -342,8 +407,9 @@ void MainWindow::on_M_button_12_pressed()
     ui->M_weight12_13->setStyleSheet(GREEN);
     ui->M_finishButton->setEnabled(true);
     ui->M_button_10->setEnabled(false);
+    ui->M_button_12->setEnabled(false);
     money -= med_graph.get_weight(10,12);
-     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
+    ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(12);
 
 }
@@ -367,6 +433,15 @@ void MainWindow::on_M_finishButton_pressed()
     {
         ui->stackedWidget->setCurrentIndex(3);
     }
+}
+
+void MainWindow::on_M_copy_seed_pressed()
+{
+    QClipboard *clipboard = QApplication::clipboard();
+    clipboard->setText(make_number(-num));
+    QMessageBox msg;
+    msg.setText("copied");
+    msg.exec();
 }
 
 

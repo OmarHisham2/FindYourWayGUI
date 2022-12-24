@@ -78,6 +78,10 @@ private slots:
 
     void on_M_finishButton_pressed();
 
+    void on_M_copy_seed_pressed();
+
+    void on_M_seed_button_pressed();
+
 private:
     Ui::MainWindow *ui;
 };
