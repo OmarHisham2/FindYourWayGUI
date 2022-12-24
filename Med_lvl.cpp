@@ -136,6 +136,11 @@ void MainWindow::on_M_startgame_button_pressed()
 }
 void MainWindow::on_M_button_1_pressed()
 {
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+           QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+           QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+              QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+              QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
     ui->M_weight2_1->setStyleSheet(WHITE);
     ui->M_weight2_3->setStyleSheet(WHITE);
     ui->M_weight2_4->setStyleSheet(WHITE);
@@ -143,6 +148,11 @@ void MainWindow::on_M_button_1_pressed()
     ui->M_weight1_4->setStyleSheet(GREEN);
     ui->M_weight0_1->setStyleSheet(WHITE);
     ui->M_weight0_2->setStyleSheet(WHITE);
+    ui->M_line0_1->setPixmap(normalleft);
+     ui->M_line0_2->setPixmap(normalright);
+     ui->M_line2_1->setPixmap(normalarrowleft);
+     ui->M_line1_4->setPixmap(greenleft);
+     ui->M_line1_5->setPixmap(greenright);
     ui->M_startgame_button->setEnabled(false);
     ui->M_button_2->setEnabled(false);
     ui->M_button_3->setEnabled(false);
@@ -161,6 +171,11 @@ void MainWindow::on_M_button_1_pressed()
 
 void MainWindow::on_M_button_4_pressed()
 {
+
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+        QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+          QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
     ui->M_weight1_5->setStyleSheet(WHITE);
     ui->M_weight1_4->setStyleSheet(WHITE);
 
@@ -170,6 +185,14 @@ void MainWindow::on_M_button_4_pressed()
 
     ui->M_weight4_7->setStyleSheet(GREEN);
     ui->M_weight4_8->setStyleSheet(GREEN);
+
+    ui->M_line1_4->setPixmap(normalleft);
+       ui->M_line1_5->setPixmap(normalright);
+       ui->M_line4_7->setPixmap(greenvertical);
+       ui->M_line4_8->setPixmap(greenright);
+       ui->M_line2_3->setPixmap(normalright);
+       ui->M_line2_4->setPixmap(normalleft);
+
     ui->M_button_4->setEnabled(false);
     ui->M_button_5->setEnabled(false);
     ui->M_button_3->setEnabled(false);
@@ -187,6 +210,23 @@ void MainWindow::on_M_button_4_pressed()
 
 void MainWindow::on_M_button_5_pressed()
 {
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+
+         QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+
+          QPixmap greenarrowright("D:/DS Project Stuff/Images/vw3arrowgreen.png");
+
+        QPixmap bottomleft("D:/DS Project Stuff/Images/vw3bottomleft.png");
+
+        ui->M_line1_4->setPixmap(normalleft);
+         ui->M_line1_5->setPixmap(normalright);
+         ui->M_line9_5->setPixmap(bottomleft);
+         ui->M_line5_7->setPixmap(greenleft);
+         ui->M_line5_3->setPixmap(greenarrowright);
+         ui->M_line9_10->setPixmap(normalleft);
+
+
     ui->M_weight1_5->setStyleSheet(WHITE);
     ui->M_weight1_4->setStyleSheet(WHITE);
 
@@ -212,6 +252,18 @@ void MainWindow::on_M_button_5_pressed()
 
 void MainWindow::on_M_button_2_pressed()
 {
+
+    QPixmap greenarrowleft("D:/DS Project Stuff/Images/vw3arrowleftgreen.png");
+        QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+        QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+        QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+        ui->M_line0_1->setPixmap(normalleft);
+        ui->M_line0_2->setPixmap(normalright);
+        ui->M_line2_1->setPixmap(greenarrowleft);
+        ui->M_line2_3->setPixmap(greenright);
+        ui->M_line2_4->setPixmap(greenleft);
+
     ui->M_weight2_1->setStyleSheet(GREEN);
     ui->M_weight2_3->setStyleSheet(GREEN);
     ui->M_weight2_4->setStyleSheet(GREEN);
@@ -230,6 +282,27 @@ void MainWindow::on_M_button_2_pressed()
 
 void MainWindow::on_M_button_3_pressed()
 {
+
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+       QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+       QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+        QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+
+       QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
+
+       QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
+
+       ui->M_line2_3->setPixmap(normalright);
+       ui->M_line5_3->setPixmap(normalarrowright);
+       ui->M_line5_7->setPixmap(normalleft);
+
+       ui->M_line3_8->setPixmap(greenleft);
+       ui->M_line3_6->setPixmap(greenright);
+
+       ui->M_line2_1->setPixmap(normalarrowleft);
+       ui->M_line2_3->setPixmap(normalright);
+       ui->M_line2_4->setPixmap(normalleft);
+
     ui->M_weight2_1->setStyleSheet(WHITE);
     ui->M_weight2_3->setStyleSheet(WHITE);
     ui->M_weight2_4->setStyleSheet(WHITE);
@@ -258,6 +331,19 @@ void MainWindow::on_M_button_3_pressed()
 
 void MainWindow::on_M_button_6_pressed()
 {
+
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+
+          QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
+
+
+
+        ui->M_line3_8->setPixmap(normalleft);
+        ui->M_line3_6->setPixmap(normalright);
+        ui->M_line6_9->setPixmap(greenvertical);
+
+
     ui->M_button_8->setEnabled(false);
     ui->M_button_9->setEnabled(true);
     ui->M_weight3_8->setStyleSheet(WHITE);
@@ -273,6 +359,26 @@ void MainWindow::on_M_button_6_pressed()
 
 void MainWindow::on_M_button_7_pressed()
 {
+
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+        QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+
+          QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
+
+        QPixmap bottomrightgreen("D:/DS Project Stuff/Images/vw3bottomrightgreen.png");
+    QPixmap bottomleft("D:/DS Project Stuff/Images/vw3bottomleft.png");
+    QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
+
+        ui->M_line7_11->setPixmap(greenvertical);
+        ui->M_line7_8->setPixmap(bottomrightgreen);
+        ui->M_line4_7->setPixmap(normalvertical);
+        ui->M_line1_5->setPixmap(normalright);
+        ui->M_line9_5->setPixmap(bottomleft);
+        ui->M_line5_7->setPixmap(normalleft);
+        ui->M_line5_3->setPixmap(normalarrowright);
+
+
     ui->M_button_3->setEnabled(false);
     ui->M_button_4->setEnabled(false);
     ui->M_button_5->setEnabled(false);
@@ -301,6 +407,25 @@ void MainWindow::on_M_button_7_pressed()
 
 void MainWindow::on_M_button_8_pressed()
 {
+
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+        QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+        QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+
+        QPixmap bottomright("D:/DS Project Stuff/Images/vw3bottomright.png");
+
+
+
+        ui->M_line8_9->setPixmap(greenright);
+        ui->M_line7_11->setPixmap(normalvertical);
+        ui->M_line7_8->setPixmap(bottomright);
+        ui->M_line3_8->setPixmap(normalleft);
+        ui->M_line3_6->setPixmap(normalright);
+        ui->M_line4_7->setPixmap(normalvertical);
+        ui->M_line4_8->setPixmap(normalright);
+
+
     ui->M_button_3->setEnabled(false);
     ui->M_button_4->setEnabled(false);
 
@@ -333,6 +458,23 @@ void MainWindow::on_M_button_8_pressed()
 
 void MainWindow::on_M_button_9_pressed()
 {
+
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+
+        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+
+         QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+
+        QPixmap bottomleftgreen("D:/DS Project Stuff/Images/vw3bottomleftgreen.png");
+
+
+        ui->M_line9_10->setPixmap(greenleft);
+        ui->M_line9_5->setPixmap(bottomleftgreen);
+         ui->M_line8_9->setPixmap(normalright);
+          ui->M_line6_9->setPixmap(normalvertical);
+
+
+
     ui->M_button_6->setEnabled(false);
     ui->M_button_8->setEnabled(false);
     ui->M_button_9->setEnabled(false);
@@ -356,6 +498,24 @@ void MainWindow::on_M_button_9_pressed()
 
 void MainWindow::on_M_button_10_pressed()
 {
+
+
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+
+     QPixmap bottomright("D:/DS Project Stuff/Images/vw3bottomright.png");
+      QPixmap bottomleft("D:/DS Project Stuff/Images/vw3bottomleft.png");
+
+   ui->M_line10_12->setPixmap(greenright);
+    ui->M_line11_10->setPixmap(bottomright);
+   ui->M_line9_10->setPixmap(normalleft);
+
+    ui->M_line9_5->setPixmap(bottomleft);
+
+     ui->M_line11_13->setPixmap(normalright);
+
+
     ui->M_button_9->setEnabled(false);
     ui->M_button_5->setEnabled(false);
     ui->M_button_11->setEnabled(false);
@@ -384,6 +544,18 @@ void MainWindow::on_M_button_10_pressed()
 void MainWindow::on_M_button_11_pressed()
 {
 
+    QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
+
+        QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+
+
+        QPixmap bottomright("D:/DS Project Stuff/Images/vw3bottomright.png");
+
+        ui->M_line11_13->setPixmap(greenright);
+        ui->M_line7_11->setPixmap(normalvertical);
+
+        ui->M_line7_8->setPixmap(bottomright);
+
     ui->M_weight7_8->setStyleSheet(WHITE);
     ui->M_weight7_11->setStyleSheet(WHITE);
 
@@ -403,6 +575,15 @@ void MainWindow::on_M_button_11_pressed()
 
 void MainWindow::on_M_button_12_pressed()
 {
+
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+
+        QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+
+
+        ui->M_line12_13->setPixmap(greenleft);
+         ui->M_line10_12->setPixmap(normalright);
+
     ui->M_weight10_12->setStyleSheet(WHITE);
     ui->M_weight12_13->setStyleSheet(GREEN);
     ui->M_finishButton->setEnabled(true);
