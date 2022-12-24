@@ -42,7 +42,7 @@ void MainWindow::on_medium_button_pressed()
     med_graph.generateRandomWeights();
     med_graph.printGraph();
     money = med_graph.BellmanFordSP(0,13);
-    ui->M_money_label->setText(QString::number(money));
+    ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     ui->M_weight0_1->setText(make_number(med_graph.get_weight(0,1)));
     ui->M_weight0_2->setText(make_number(med_graph.get_weight(0,2)));
     ui->M_weight1_4->setText(make_number(med_graph.get_weight(1,4)));
@@ -96,7 +96,7 @@ void MainWindow::on_M_button_1_pressed()
     }else{
         money -=med_graph.get_weight(2,1);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(1);
 
 }
@@ -123,7 +123,7 @@ void MainWindow::on_M_button_4_pressed()
     }else{
         money -=med_graph.get_weight(2,4);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(4);
 }
 
@@ -148,7 +148,7 @@ void MainWindow::on_M_button_5_pressed()
     }else{
         money -= med_graph.get_weight(9,5);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(5);
 }
 
@@ -163,7 +163,7 @@ void MainWindow::on_M_button_2_pressed()
     ui->M_button_3->setEnabled(true);
     ui->M_button_1->setEnabled(true);
     money -= med_graph.get_weight(0,2);
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(2);
 
 }
@@ -192,7 +192,7 @@ void MainWindow::on_M_button_3_pressed()
     }else{
         money -= med_graph.get_weight(5,3);
     }
-    ui->M_money_label->setText(QString::number(money));
+    ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(3);
 }
 
@@ -206,7 +206,7 @@ void MainWindow::on_M_button_6_pressed()
     if(from[3]){
         money -= med_graph.get_weight(3,6);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(6);
 
 }
@@ -233,7 +233,7 @@ void MainWindow::on_M_button_7_pressed()
     }else{
         money -= med_graph.get_weight(5,7);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(7);
 }
 
@@ -264,7 +264,7 @@ void MainWindow::on_M_button_8_pressed()
     }else if(from[3]){
         money -= med_graph.get_weight(3,8);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(8);
 }
 
@@ -285,7 +285,7 @@ void MainWindow::on_M_button_9_pressed()
     }else{
         money -= med_graph.get_weight(6,9);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(9);
 
 }
@@ -311,7 +311,7 @@ void MainWindow::on_M_button_10_pressed()
     }else{
         money -= med_graph.get_weight(9,10);
     }
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(10);
 
 
@@ -343,7 +343,7 @@ void MainWindow::on_M_button_12_pressed()
     ui->M_finishButton->setEnabled(true);
     ui->M_button_10->setEnabled(false);
     money -= med_graph.get_weight(10,12);
-    ui->M_money_label->setText(QString::number(money));
+     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(12);
 
 }

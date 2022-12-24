@@ -4,15 +4,11 @@
         <file>D:/DS Project Stuff/Images/logo.png</file>
         <file>D:/DS Project Stuff/Images/star.png</file>
         <file>D:/DS Project Stuff/Images/stargreen.png</file>
-        <file>D:/DS Project Stuff/Images/vw.png</file>
         <file>D:/DS Project Stuff/Images/vw3arrow.png</file>
         <file>D:/DS Project Stuff/Images/vw3arrowgreen.png</file>
         <file>D:/DS Project Stuff/Images/vw3arrowleft.png</file>
         <file>D:/DS Project Stuff/Images/vw3arrowleftgreen.png</file>
         <file>D:/DS Project Stuff/Images/vw3arrowrightgreen.png</file>
-        <file>D:/DS Project Stuff/Images/vw3left.png</file>
-        <file>D:/DS Project Stuff/Images/vw3leftarrow.png</file>
-        <file>D:/DS Project Stuff/Images/vw3leftgreen.png</file>
         <file>D:/DS Project Stuff/Images/vw3right.png</file>
         <file>D:/DS Project Stuff/Images/vw3rightgreen.png</file>
         <file>D:/DS Project Stuff/Images/vwgreen.png</file>
@@ -29,5 +25,12 @@
         <file>D:/DS Project Stuff/ProjectStuff.hpp</file>
         <file>D:/DS Project Stuff/Images/vwgreenhorizontal.png</file>
         <file>D:/DS Project Stuff/Images/vwhorizontal.png</file>
+        <file>D:/DS Project Stuff/Images/vw3left.png</file>
+        <file>D:/DS Project Stuff/Images/vw.png</file>
+        <file>D:/DS Project Stuff/Images/vw3bottomright.png</file>
+        <file>D:/DS Project Stuff/Images/vw3bottomrightgreen.png</file>
+        <file>D:/DS Project Stuff/Images/vw3bottomleft.png</file>
+        <file>D:/DS Project Stuff/Images/vw3bottomleftgreen.png</file>
+        <file>D:/DS Project Stuff/Images/vw3leftgreen.png</file>
     </qresource>
 </RCC>
