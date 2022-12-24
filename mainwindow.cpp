@@ -469,8 +469,7 @@ void MainWindow::on_menuexit_button_pressed()
 
 
 
-<<<<<<< Updated upstream
-=======
+
 void MainWindow::on_insane_button_pressed()
 {
 
@@ -482,5 +481,3 @@ void MainWindow::on_I_startgame_button_2_pressed()
 
 }
 
-
->>>>>>> Stashed changes

@@ -78,11 +78,11 @@ private slots:
 
     void on_M_finishButton_pressed();
 
-<<<<<<< Updated upstream
+
     void on_M_copy_seed_pressed();
 
     void on_M_seed_button_pressed();
-=======
+
     void on_hard_button_pressed();
 
     void on_insane_button_pressed();
@@ -134,7 +134,7 @@ private slots:
     void on_I_button_21_pressed();
 
     void on_I_finishButton_pressed();
->>>>>>> Stashed changes
+
 
 private:
     Ui::MainWindow *ui;

@@ -27,11 +27,11 @@
      </rect>
     </property>
     <property name="currentIndex">
-<<<<<<< Updated upstream
+
      <number>1</number>
-=======
+
      <number>5</number>
->>>>>>> Stashed changes
+
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -330,19 +330,19 @@ background-color: #ff6961;
        <bool>false</bool>
       </property>
      </widget>
-<<<<<<< Updated upstream
+
      <widget class="QPushButton" name="M_seed_button">
       <property name="geometry">
        <rect>
         <x>500</x>
         <y>580</y>
-=======
-     <widget class="QPushButton" name="insane_button">
+
+     <!--<widget class="QPushButton" name="insane_button">
       <property name="geometry">
        <rect>
         <x>500</x>
-        <y>560</y>
->>>>>>> Stashed changes
+        <y>560</y>-->
+
         <width>261</width>
         <height>51</height>
        </rect>
@@ -366,21 +366,21 @@ border-bottom-left-radius:15;
 color: rgb(255, 255, 255);
 }
 QPushButton:hover {
-<<<<<<< Updated upstream
+
 background-color: #04AA6D;
-=======
+
 background-color: #9A1B00;
->>>>>>> Stashed changes
+
 }
 
 </string>
       </property>
       <property name="text">
-<<<<<<< Updated upstream
+
        <string>SEED</string>
-=======
+
        <string>Insane!</string>
->>>>>>> Stashed changes
+
       </property>
       <property name="checkable">
        <bool>false</bool>
