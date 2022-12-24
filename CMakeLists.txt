@@ -26,7 +26,7 @@ set(PROJECT_SOURCES
         Graph.h
         GraphTest.cpp
         Med_lvl.cpp
-
+        InsaneLevel.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

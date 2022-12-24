@@ -27,7 +27,11 @@
      </rect>
     </property>
     <property name="currentIndex">
+<<<<<<< Updated upstream
      <number>1</number>
+=======
+     <number>5</number>
+>>>>>>> Stashed changes
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -326,11 +330,19 @@ background-color: #ff6961;
        <bool>false</bool>
       </property>
      </widget>
+<<<<<<< Updated upstream
      <widget class="QPushButton" name="M_seed_button">
       <property name="geometry">
        <rect>
         <x>500</x>
         <y>580</y>
+=======
+     <widget class="QPushButton" name="insane_button">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>560</y>
+>>>>>>> Stashed changes
         <width>261</width>
         <height>51</height>
        </rect>
@@ -354,13 +366,21 @@ border-bottom-left-radius:15;
 color: rgb(255, 255, 255);
 }
 QPushButton:hover {
+<<<<<<< Updated upstream
 background-color: #04AA6D;
+=======
+background-color: #9A1B00;
+>>>>>>> Stashed changes
 }
 
 </string>
       </property>
       <property name="text">
+<<<<<<< Updated upstream
        <string>SEED</string>
+=======
+       <string>Insane!</string>
+>>>>>>> Stashed changes
       </property>
       <property name="checkable">
        <bool>false</bool>
@@ -4576,6 +4596,4051 @@ background-color: rgb(91, 91, 91);</string>
      <zorder>M_money_label</zorder>
      <zorder>M_seed_label</zorder>
      <zorder>M_copy_seed</zorder>
+    </widget>
+    <widget class="QWidget" name="page5">
+     <widget class="QPushButton" name="I_button_13">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>520</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+13</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>320</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+4</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>430</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+3</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_2">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>500</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+2</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_1">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>480</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+1</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_startgame_button">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>630</y>
+        <width>211</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">  
+QPushButton::enabled {
+background-color: white;
+  border: none;
+  color: black;
+  padding: 20px;
+border-radius:30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton:hover {
+background-color: rgb(134, 176, 73);
+}
+
+  
+QPushButton::!enabled {
+background-color: grey;
+  border: none;
+  color: black;
+  padding: 20px;
+border-radius:30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Start</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_5">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1160</x>
+        <y>330</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+5</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_8">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>330</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+8</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_7">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>300</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+7</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_6">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1100</x>
+        <y>210</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+6</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_15">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>230</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+15</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_21">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>80</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+21</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_16">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>120</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+16</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_10">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>210</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+10</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_9">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>280</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+9</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_11">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>300</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+11</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_12">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>380</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+12</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_14">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>370</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+14</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_20">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>60</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+20</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_19">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>40</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+19</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_18">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>20</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+18</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_button_17">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>970</x>
+        <y>140</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Chailce-Noggin</family>
+        <pointsize>15</pointsize>
+        <italic>false</italic>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton::!enabled  {
+background-color: grey;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton::enabled 
+{
+background-color: #86B049;
+  border: none;
+  color: white;
+font: 15pt &quot;Chailce-Noggin&quot;;
+  padding: 20px;
+border-radius:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+
+QPushButton:hover {
+background-color: green;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Node
+17</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="I_finishButton">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>0</y>
+        <width>211</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">  
+QPushButton::enabled {
+background-color: white;
+  border: none;
+  color: black;
+  padding: 20px;
+border-radius:30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton:hover {
+background-color: rgb(134, 176, 73);
+}
+
+  
+QPushButton::!enabled {
+background-color: grey;
+  border: none;
+  color: black;
+  padding: 20px;
+border-radius:30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Finish</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_money_label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>361</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>28</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>Money : 100</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line1_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>480</y>
+        <width>71</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrow.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line0_1">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>570</y>
+        <width>141</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line2_3">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>500</y>
+        <width>81</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line7_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>250</y>
+        <width>221</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line0_13">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>580</y>
+        <width>151</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line4_5">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>280</y>
+        <width>111</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrow.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line4_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>280</y>
+        <width>71</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line3_4">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>410</y>
+        <width>331</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line5_6">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1160</x>
+        <y>290</y>
+        <width>31</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line7_8">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>340</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3bottomleft.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line10_15">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>210</y>
+        <width>141</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrowleft.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line17_18">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>110</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line7_2">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>360</y>
+        <width>251</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/D:/DS Project Stuff/Images/vwdown.png);
+background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line3_7">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>370</y>
+        <width>91</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line8_1">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>400</y>
+        <width>151</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/D:/DS Project Stuff/Images/vwdown.png);
+background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line13_12">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>450</y>
+        <width>101</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line13_14">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>440</y>
+        <width>71</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line14_15">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>320</y>
+        <width>131</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line15_21">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>150</y>
+        <width>51</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line21_20">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>40</y>
+        <width>61</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrow.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line20_10">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>140</y>
+        <width>221</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/D:/DS Project Stuff/Images/vwdown.png);
+background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line10_16">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>160</y>
+        <width>131</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line12_11">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>350</y>
+        <width>71</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line11_10">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>280</y>
+        <width>51</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3right.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line9_10">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>270</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line8_9">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>340</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line16_9">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>200</y>
+        <width>51</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3bottomleft.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line16_17">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>90</y>
+        <width>271</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrow.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line6_17">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>1050</x>
+        <y>200</y>
+        <width>61</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line18_19">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>10</y>
+        <width>101</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3arrowleft.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line19_22">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>50</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight0_1">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>580</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight5_6">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>300</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight4_5">
+      <property name="geometry">
+       <rect>
+        <x>1060</x>
+        <y>340</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight3_7">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>400</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight7_2">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>440</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight2_3">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>540</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight1_2">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>490</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight10_16">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>180</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight7_8">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>320</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight20_10">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>150</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight16_9">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>210</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight8_9">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>370</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight7_6">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>270</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight12_11">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>400</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight14_15">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>330</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight13_14">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>500</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight13_12">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>520</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight0_13">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>630</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight21_20">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight15_21">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>170</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight10_15">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>240</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight11_10">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>310</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight16_17">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>180</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight4_6">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>290</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight6_17">
+      <property name="geometry">
+       <rect>
+        <x>1060</x>
+        <y>180</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight17_18">
+      <property name="geometry">
+       <rect>
+        <x>1040</x>
+        <y>110</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight19_22">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>70</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight18_19">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight9_10">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>260</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line7_16">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>190</y>
+        <width>121</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight7_16">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>240</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line17_21">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>100</y>
+        <width>121</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight17_19">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>120</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line21_10">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>160</y>
+        <width>81</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3bottomright.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight21_10">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>180</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_line16_20">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>100</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>71</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vw3left.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="openExternalLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight16_20">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>90</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight3_4">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>410</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="I_weight8_1">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>440</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+border-top-right-radius:15;
+border-bottom-right-radius:15;
+border-top-left-radius:15;
+border-bottom-left-radius:15;
+color: rgb(255, 255, 255);
+
+</string>
+      </property>
+      <property name="text">
+       <string>weight 0 to 1</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
