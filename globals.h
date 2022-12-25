@@ -9,6 +9,7 @@
 
 extern int money;
 
+
 extern QMediaPlayer * music;
 extern QAudioOutput * musicoutput;
 

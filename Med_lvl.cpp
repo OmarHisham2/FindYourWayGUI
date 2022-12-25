@@ -15,7 +15,7 @@
 
 #define GREEN "color:#00FF00"
 #define WHITE "color:#FFFFFF"
-extern int money;
+
 long int med_seed;
 extern bool med,easy,seed,hard;
 vector<Edge> edges_med = { {0,1},{0,2},{1,4},{1,5},{2,1},{2,3},{2,4},{3,6},{3,8},
@@ -53,7 +53,8 @@ void MainWindow::on_M_seed_button_pressed()
     ui->M_finishButton->setEnabled(0);
     num = med_graph.generateRandomWeights(st.toLong());
     med_seed = num;
-    ui->M_seed_label->setText(make_number(-num));
+
+    ui->M_seed_label->setText(QString("Seed : ").append(QString::number(num)));
     med_graph.printGraph();
 
     money = med_graph.BellmanFordSP(0,13);
@@ -98,10 +99,11 @@ void MainWindow::on_medium_button_pressed()
     //med graph ********************************************************
     ui->M_finishButton->setEnabled(0);
     num = med_graph.generateRandomWeights();
-    ui->M_seed_label->setText(make_number(-num));
+   ui->M_seed_label->setText(QString("Seed : ").append(QString::number(num)));
     med_seed =num;
     med_graph.printGraph();
     money = med_graph.BellmanFordSP(0,13);
+
     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     ui->M_weight0_1->setText(make_number(med_graph.get_weight(0,1)));
     ui->M_weight0_2->setText(make_number(med_graph.get_weight(0,2)));
@@ -139,7 +141,10 @@ void MainWindow::on_M_startgame_button_pressed()
     ui->M_finishButton->setEnabled(0);
     ui->M_weight0_1->setStyleSheet(GREEN);
     ui->M_weight0_2->setStyleSheet(GREEN);
-
+    levelButtons->setAudioOutput(leveloutput);
+    leveloutput->setVolume(0.8);
+    levelButtons->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/startgame.mp3"));
+    levelButtons->play();
 
 }
 void MainWindow::on_M_button_1_pressed()
@@ -576,7 +581,7 @@ void MainWindow::on_M_button_11_pressed()
 
     ui->M_finishButton->setEnabled(true);
     money -= med_graph.get_weight(7,11);
-    ui->M_money_label->setText(QString::number(money));
+    ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(11);
 
 }
@@ -617,6 +622,12 @@ void MainWindow::on_M_finishButton_pressed()
     QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
 
+ setStars();
+
+ buttonsfx->setAudioOutput(leveloutput);
+ leveloutput->setVolume(0.8);
+ buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/finish.mp3"));
+ buttonsfx->play();
 
     ui->M_line11_13->setPixmap(normalright);
     ui->M_line12_13->setPixmap(normalleft);
@@ -639,6 +650,7 @@ void MainWindow::on_M_finishButton_pressed()
         ui->nextLevel_button->setEnabled(true);
 
     }
+
 }
 
 void MainWindow::on_M_copy_seed_pressed()
@@ -646,9 +658,11 @@ void MainWindow::on_M_copy_seed_pressed()
     QClipboard *clipboard = QApplication::clipboard();
     clipboard->setText(make_number(-num));
     QMessageBox msg;
-    msg.setText("copied");
+    msg.setText("Seed copied");
     msg.exec();
 }
+
+
 
 
 

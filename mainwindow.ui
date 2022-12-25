@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -355,8 +355,6 @@ color: rgb(255, 255, 255);
 }
 QPushButton:hover {
 
-background-color: #04AA6D;
-
 background-color: #9A1B00;
 
 }
@@ -679,7 +677,7 @@ border-radius:40px;
 }
 QPushButton::enabled 
 {
-background-color: #ff6242;
+background-color: #86B049;
   border: none;
   color: white;
 font: 15pt &quot;Chailce-Noggin&quot;;
@@ -692,7 +690,7 @@ border-radius:40px;
 }
 
 QPushButton:hover {
-background-color: red;
+background-color: green;
 }
 </string>
       </property>
@@ -744,7 +742,7 @@ border-radius:40px;
 }
 QPushButton::enabled 
 {
-background-color: #ff6242;
+background-color: #86B049;
   border: none;
   color: white;
 font: 15pt &quot;Chailce-Noggin&quot;;
@@ -757,7 +755,7 @@ border-radius:40px;
 }
 
 QPushButton:hover {
-background-color: red;
+background-color: green;
 }
 </string>
       </property>
@@ -1165,7 +1163,7 @@ border-radius:40px;
 }
 QPushButton::enabled 
 {
-background-color: #ff6242;
+background-color: #86B049;
   border: none;
   color: white;
 font: 15pt &quot;Chailce-Noggin&quot;;
@@ -1178,7 +1176,7 @@ border-radius:40px;
 }
 
 QPushButton:hover {
-background-color: red;
+background-color: green;
 }
 </string>
       </property>
@@ -4471,15 +4469,15 @@ color: rgb(255, 255, 255);
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>470</y>
-        <width>261</width>
+        <y>560</y>
+        <width>331</width>
         <height>81</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Segoe UI</family>
-        <pointsize>24</pointsize>
+        <family>Probert</family>
+        <pointsize>18</pointsize>
         <bold>true</bold>
        </font>
       </property>
@@ -4494,7 +4492,8 @@ color: rgb(255, 255, 255);
 </string>
       </property>
       <property name="text">
-       <string>seed value</string>
+       <string>Seed Value :- 
+</string>
       </property>
       <property name="textInteractionFlags">
        <set>Qt::TextSelectableByMouse</set>
@@ -4503,20 +4502,44 @@ color: rgb(255, 255, 255);
      <widget class="QPushButton" name="M_copy_seed">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>570</y>
-        <width>101</width>
-        <height>31</height>
+        <x>50</x>
+        <y>630</y>
+        <width>141</width>
+        <height>71</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Probert</family>
+        <pointsize>11</pointsize>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(91, 91, 91);</string>
+       <string notr="true">QPushButton {
+background-color: white;
+  border: none;
+  color: black;
+  padding: 20px;
+border-radius:30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+}
+QPushButton:hover {
+background-color: #9A1B00;
+}
+
+</string>
       </property>
       <property name="text">
-       <string>COPY SEED</string>
+       <string>Copy Seed</string>
       </property>
      </widget>
+     <zorder>M_seed_label</zorder>
      <zorder>M_line5_3</zorder>
      <zorder>M_line0_1</zorder>
      <zorder>M_weight11_13</zorder>
@@ -4578,7 +4601,6 @@ background-color: rgb(91, 91, 91);</string>
      <zorder>M_finishButton</zorder>
      <zorder>M_button_8</zorder>
      <zorder>M_money_label</zorder>
-     <zorder>M_seed_label</zorder>
      <zorder>M_copy_seed</zorder>
     </widget>
     <widget class="QWidget" name="page5">

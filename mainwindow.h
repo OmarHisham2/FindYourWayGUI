@@ -35,6 +35,7 @@ private slots:
     void on_easy_button_pressed();
 
     void setStars();
+    void setMStars();
 
     void on_finishButton_pressed();
 

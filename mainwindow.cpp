@@ -92,7 +92,7 @@ void MainWindow::on_easy_button_pressed()
         med = 0;
         //end of retry
 
-    bool valid = false;
+
     vector<Edge> edges;
     edges.push_back({ 0, 1, });
     edges.push_back({ 0, 2, });
@@ -227,7 +227,7 @@ void MainWindow::on_button_2_pressed()
     ui->line11->setPixmap(normalvertical);
     ui->line12->setPixmap(normalright);
     ui->line3->setPixmap(greenleft);
-    minus5=true;
+
    //weight4=t4_2;
    // ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
@@ -261,7 +261,7 @@ void MainWindow::on_button_3_pressed()
     ui->line3->setPixmap(normalleft);
     ui->line4->setPixmap(greenleft);
     ui->line5->setPixmap(greenright);
-     plus10=true;
+
      //weight4=t4_3;
      //ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
@@ -294,9 +294,10 @@ void MainWindow::on_button_4_pressed()
     QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
     QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
     QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
-    if(plus6){ui->line1->setPixmap(normalright);}
-    else if(minus5){ui->line11->setPixmap(normalvertical);}
-    else if(plus10){ui->line3->setPixmap(normalleft);}
+
+    ui->line1->setPixmap(normalright);
+    ui->line3->setPixmap(normalleft);
+    ui->line11->setPixmap(normalvertical);
     ui->line7->setPixmap(greenarrowright);
     ui->line8->setPixmap(greenright);
     ui->line4->setPixmap(normalleft);
@@ -334,12 +335,10 @@ void MainWindow::on_button_5_pressed()
            QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
           ui->line4->setPixmap(normalleft);
           ui->line5->setPixmap(normalright);
-        plus7=true;
-           if(minus20)
-           {
-               ui->line6->setPixmap(normalarrowleft);
-               ui->line9->setPixmap(normalleft);
-           }
+          ui->line6->setPixmap(normalarrowleft);
+          ui->line9->setPixmap(normalleft);
+
+
 
              ui->finishButton->setEnabled(true);
               ui->button_5->setEnabled(false);
@@ -355,20 +354,20 @@ void MainWindow::on_button_5_pressed()
 
 void MainWindow::setStars()
 {
-    if(money >= 70)
+    if(money >= 10)
     {
         QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
         ui->star2->setPixmap(greenstar);
         ui->star3->setPixmap(greenstar);
     }
-    else if ((money < 70) && (money > 40))
+    else if ((money < 0) && (money > 10))
     {
         QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
         ui->star2->setPixmap(greenstar);
     }
-    else if ( money < 40 && money >= 0)
+    else if (money >= 0)
     {
         QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
@@ -449,12 +448,7 @@ void MainWindow::on_retry_button_pressed()
         E_weight4_5= i->second;  i++;
         E_weight5_4 = (graphEasy.adjList[5].begin())->second;
         money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
-        if ( money <= 0 )
-        {
-            valid = true;
-        }
-        else
-            valid = true; //changed here
+
 
         }
 

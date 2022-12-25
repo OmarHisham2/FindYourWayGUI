@@ -139,7 +139,10 @@ void MainWindow::on_hard_button_pressed()
 
 void MainWindow::on_I_startgame_button_pressed()
 {
-
+    levelButtons->setAudioOutput(leveloutput);
+    leveloutput->setVolume(0.8);
+    levelButtons->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/startgame.mp3"));
+    levelButtons->play();
     //update_Ifrom(0);
     ui->I_button_1->setEnabled(true);
     ui->I_button_13->setEnabled(true);
@@ -154,6 +157,7 @@ void MainWindow::on_I_startgame_button_pressed()
 
 void MainWindow::on_I_button_1_pressed()
 {
+
     is1_or7 = 1;
     ui->I_button_2->setEnabled(true);
     ui->I_button_1->setEnabled(false);
@@ -622,6 +626,8 @@ void MainWindow::on_I_finishButton_pressed()
     leveloutput->setVolume(0.8);
     buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/finish.mp3"));
     buttonsfx->play();
+
+     setStars();
 
     money-= Insane_graph.get_weight(19,22);
 
