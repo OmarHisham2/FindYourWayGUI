@@ -95,8 +95,8 @@ void MainWindow::on_M_seed_button_pressed()
 void MainWindow::on_medium_button_pressed()
 {
     med =true;
-    easy=false;
-    hard=false;
+    easy=0;
+    hard=0;
     ui->stackedWidget->setCurrentIndex(4);
     //med graph ********************************************************
     ui->M_finishButton->setEnabled(0);

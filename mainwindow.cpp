@@ -35,6 +35,7 @@ bool ebut4;
 extern long int insane_seed;
 
 int is4 = 3;
+int is0_1_or2 = 0;
 
 bool plus6=false;
 bool minus5=false;
@@ -87,9 +88,9 @@ void MainWindow::on_easy_button_pressed()
 {
 
     //addiding code for retry logic
-        hard = 0;
-        easy = true;
-        med = 0;
+    easy = true;
+    hard = 0;
+    med = 0;
         //end of retry
 
 
@@ -105,10 +106,10 @@ void MainWindow::on_easy_button_pressed()
     edges.push_back({ 5, 6, });
     edges.push_back({ 6, 5, });
 
-
+    ui->button_4->setEnabled(0);
 
     Graph graphEasy(edges, 7);
-    graphEasy.generateRandomWeights();
+    easy_seed = graphEasy.generateRandomWeights();
     auto j = graphEasy.adjList[0].begin();
 
     E_weight0_1= j->second;  j++;
@@ -141,7 +142,7 @@ void MainWindow::on_easy_button_pressed()
     ui->label_9->setText(QString(" ").append(QString::number(-E_weight4_5)));
 
 
-
+    ui->startgame_button->setEnabled(true);
 
 
     music->setAudioOutput(musicoutput);
@@ -171,6 +172,7 @@ void MainWindow::on_startgame_button_pressed()
     leveloutput->setVolume(0.8);
     levelButtons->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/startgame.mp3"));
     levelButtons->play();
+    is0_1_or2 = 0;
 }
 
 void MainWindow::on_button_1_pressed()
@@ -198,6 +200,7 @@ void MainWindow::on_button_1_pressed()
     ui->line12->setPixmap(normalright);
     ui->line1->setPixmap(greenright);
     plus6=true;
+    is0_1_or2 = 1;
    // weight4=t4_1;
     //ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 
@@ -228,6 +231,7 @@ void MainWindow::on_button_2_pressed()
     ui->line12->setPixmap(normalright);
     ui->line3->setPixmap(greenleft);
 
+    is0_1_or2 = 2;
    //weight4=t4_2;
    // ui->button_4->setText(QString(" ").append(QString::number(weight4)));
 }
@@ -248,7 +252,17 @@ void MainWindow::on_button_3_pressed()
     buttonsfx->setAudioOutput(leveloutput);
     leveloutput->setVolume(0.8);
     buttonsfx->play();
-    money -= E_weight1_3;
+    if(is0_1_or2 == 0)
+    {
+        money -= E_weight0_3;
+
+    }else if(is0_1_or2 == 1)
+    {
+        money -= E_weight1_3;
+    }else if(is0_1_or2 == 2)
+    {
+        money -= E_weight2_3;
+    }
     ui->money_label->setText(QString("Money : ").append(QString::number(money)) );
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
@@ -371,6 +385,11 @@ void MainWindow::setStars()
     {
         QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star2->setPixmap(greenstar);
+    }else if(money < 0)
+    {
+        ui->star1->setVisible(0);
+        ui->star2->setVisible(0);
+        ui->star3->setVisible(0);
     }
 }
 
@@ -407,7 +426,9 @@ void MainWindow::on_finishButton_pressed()
     }
     else
     {
+        ui->winner_label->setText("You Win!!");
         ui->stackedWidget->setCurrentIndex(3);
+        ui->nextLevel_button->setEnabled(true);
     }
 }
 
@@ -447,6 +468,8 @@ void MainWindow::on_retry_button_pressed()
         E_weight5_4 = (graphEasy.adjList[5].begin())->second;
         money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
 
+        ui->button_4->setEnabled(0);
+
         ui->label_1->setText(QString(" ").append(QString::number(-E_weight0_1)));
         ui->label_2->setText(QString(" ").append(QString::number(-E_weight0_3)));
         ui->label_3->setText(QString(" ").append(QString::number(-E_weight0_2)));
@@ -459,7 +482,7 @@ void MainWindow::on_retry_button_pressed()
 
 
 
-
+        ui->startgame_button->setEnabled(true);
 
         music->setAudioOutput(musicoutput);
         musicoutput->setVolume(0.8);
