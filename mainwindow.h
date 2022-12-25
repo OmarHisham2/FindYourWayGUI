@@ -136,6 +136,8 @@ private slots:
     void on_I_finishButton_pressed();
 
 
+    void on_nextLevel_button_pressed();
+
 private:
     Ui::MainWindow *ui;
 };

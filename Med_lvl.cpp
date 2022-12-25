@@ -636,6 +636,8 @@ void MainWindow::on_M_finishButton_pressed()
     {
         ui->winner_label->setText("You Win");
         ui->stackedWidget->setCurrentIndex(3);
+        ui->nextLevel_button->setEnabled(true);
+
     }
 }
 
