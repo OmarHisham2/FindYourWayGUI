@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -6641,18 +6641,23 @@ color: rgb(255, 255, 255);
      <widget class="QLabel" name="I_line7_2">
       <property name="geometry">
        <rect>
-        <x>710</x>
-        <y>360</y>
-        <width>251</width>
-        <height>181</height>
+        <x>740</x>
+        <y>380</y>
+        <width>201</width>
+        <height>131</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">image: url(:/D:/DS Project Stuff/Images/vwdown.png);
-background-color: transparent;</string>
+       <string notr="true">background-color: transparent;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vwdown.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="I_line3_7">
@@ -6713,18 +6718,23 @@ background-color: transparent;</string>
      <widget class="QLabel" name="I_line8_1">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>400</y>
+        <x>590</x>
+        <y>410</y>
         <width>151</width>
-        <height>101</height>
+        <height>81</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">image: url(:/D:/DS Project Stuff/Images/vwdown.png);
-background-color: transparent;</string>
+       <string notr="true">background-color: transparent;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vwdown.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="I_line13_12">
@@ -6964,11 +6974,16 @@ background-color: transparent;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">image: url(:/D:/DS Project Stuff/Images/vwdown.png);
-background-color: transparent;</string>
+       <string notr="true">background-color: transparent;</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/D:/DS Project Stuff/Images/vwdown.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
      <widget class="QLabel" name="I_line10_16">
@@ -8356,7 +8371,7 @@ color: rgb(255, 255, 255);
        <string>weight 0 to 1</string>
       </property>
      </widget>
-     <widget class="QLabel" name="I_line17_21">
+     <widget class="QLabel" name="I_line17_19">
       <property name="enabled">
        <bool>true</bool>
       </property>

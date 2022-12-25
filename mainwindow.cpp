@@ -361,7 +361,7 @@ void MainWindow::setStars()
         ui->star2->setPixmap(greenstar);
         ui->star3->setPixmap(greenstar);
     }
-    else if ((money < 0) && (money > 10))
+    else if ((money > 0) && (money < 10))
     {
         QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
         ui->star1->setPixmap(greenstar);
@@ -417,9 +417,7 @@ void MainWindow::on_retry_button_pressed()
 
     if(easy && !med && !hard){
         ui->stackedWidget->setCurrentIndex(2);
-        bool valid = false;
-        while(!valid)
-        {
+
         vector<Edge> edges;
         edges.push_back({ 0, 1, });
         edges.push_back({ 0, 2, });
@@ -448,9 +446,6 @@ void MainWindow::on_retry_button_pressed()
         E_weight4_5= i->second;  i++;
         E_weight5_4 = (graphEasy.adjList[5].begin())->second;
         money = graphEasy.BellmanFordSP(0, graphEasy.nodes_count() - 1);
-
-
-        }
 
         ui->label_1->setText(QString(" ").append(QString::number(-E_weight0_1)));
         ui->label_2->setText(QString(" ").append(QString::number(-E_weight0_3)));
@@ -581,6 +576,7 @@ void MainWindow::on_retry_button_pressed()
         ui->I_weight7_2->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
         ui->I_weight7_6->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
         ui->I_weight7_8->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+        ui->I_weight7_16->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
         ui->I_weight8_1->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
         ui->I_weight0_13->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
         ui->I_weight13_14->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
