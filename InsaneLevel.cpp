@@ -45,6 +45,7 @@ void MainWindow::on_hard_button_pressed()
     hard = true;
     easy = 0;
     med = 0;
+    seed=0;
     //end of retry
     ui->stackedWidget->setCurrentIndex(5);
 
@@ -945,12 +946,18 @@ void MainWindow::on_I_finishButton_pressed()
 
     if(money < 0)
     {
+        ui->star1->setVisible(0);
+        ui->star2->setVisible(0);
+        ui->star3->setVisible(0);
         ui->stackedWidget->setCurrentIndex(3);
         ui->winner_label->setText("You Lose");
         ui->nextLevel_button->setEnabled(false);
     }
     else
     {
+        ui->star1->setVisible(1);
+        ui->star2->setVisible(1);
+        ui->star3->setVisible(1);
         ui->winner_label->setText("You Win!!");
         ui->stackedWidget->setCurrentIndex(3);
         ui->nextLevel_button->setEnabled(false);
@@ -976,6 +983,7 @@ void MainWindow::on_I_finishButton_pressed()
 
     }
 
+    //setStars();
 }
 
 

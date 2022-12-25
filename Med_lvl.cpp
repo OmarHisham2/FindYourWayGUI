@@ -39,6 +39,8 @@ QString make_number(long int x){
 
 void MainWindow::on_M_seed_button_pressed()
 {
+    seed=1;
+    med=0,easy=0,hard=0;
     QInputDialog d;
     d.setStyleSheet("color: #FFF;"
                     "background-color: grey;"
@@ -48,12 +50,12 @@ void MainWindow::on_M_seed_button_pressed()
 
     d.exec();
     QString st =  d.textValue(); //add
-    ui->stackedWidget->setCurrentIndex(4);
+    num = med_graph.generateRandomWeights(st.toLong());
     //med graph ********************************************************
     ui->M_finishButton->setEnabled(0);
-    num = med_graph.generateRandomWeights(st.toLong());
-    med_seed = num;
 
+    med_seed = num;
+    ui->stackedWidget->setCurrentIndex(4);
     ui->M_seed_label->setText(QString("Seed : ").append(QString::number(num)));
     med_graph.printGraph();
 
@@ -134,9 +136,13 @@ void MainWindow::on_medium_button_pressed()
 
 void MainWindow::on_M_startgame_button_pressed()
 {
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
     update_from(0);
     ui->M_button_1->setEnabled(true);
     ui->M_button_2->setEnabled(true);
+    ui->M_line0_1->setPixmap(greenleft);
+    ui->M_line0_2->setPixmap(greenright);
     ui->M_startgame_button->setEnabled(0);
     ui->M_finishButton->setEnabled(0);
     ui->M_weight0_1->setStyleSheet(GREEN);
@@ -150,10 +156,11 @@ void MainWindow::on_M_startgame_button_pressed()
 void MainWindow::on_M_button_1_pressed()
 {
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
-           QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-           QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
-              QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
-              QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+    QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
+    QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
     ui->M_weight2_1->setStyleSheet(WHITE);
     ui->M_weight2_3->setStyleSheet(WHITE);
     ui->M_weight2_4->setStyleSheet(WHITE);
@@ -162,10 +169,12 @@ void MainWindow::on_M_button_1_pressed()
     ui->M_weight0_1->setStyleSheet(WHITE);
     ui->M_weight0_2->setStyleSheet(WHITE);
     ui->M_line0_1->setPixmap(normalleft);
-     ui->M_line0_2->setPixmap(normalright);
-     ui->M_line2_1->setPixmap(normalarrowleft);
-     ui->M_line1_4->setPixmap(greenleft);
-     ui->M_line1_5->setPixmap(greenright);
+    ui->M_line0_2->setPixmap(normalright);
+    ui->M_line2_1->setPixmap(normalarrowleft);
+    ui->M_line2_3->setPixmap(normalright);
+    ui->M_line2_4->setPixmap(normalleft);
+    ui->M_line1_4->setPixmap(greenleft);
+    ui->M_line1_5->setPixmap(greenright);
     ui->M_startgame_button->setEnabled(false);
     ui->M_button_2->setEnabled(false);
     ui->M_button_3->setEnabled(false);
@@ -186,9 +195,10 @@ void MainWindow::on_M_button_4_pressed()
 {
 
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
-        QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-        QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
-          QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenvertical("D:/DS Project Stuff/Images/vwgreen.png");
+    QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
     ui->M_weight1_5->setStyleSheet(WHITE);
     ui->M_weight1_4->setStyleSheet(WHITE);
 
@@ -200,11 +210,12 @@ void MainWindow::on_M_button_4_pressed()
     ui->M_weight4_8->setStyleSheet(GREEN);
 
     ui->M_line1_4->setPixmap(normalleft);
-       ui->M_line1_5->setPixmap(normalright);
-       ui->M_line4_7->setPixmap(greenvertical);
-       ui->M_line4_8->setPixmap(greenright);
-       ui->M_line2_3->setPixmap(normalright);
-       ui->M_line2_4->setPixmap(normalleft);
+    ui->M_line1_5->setPixmap(normalright);
+    ui->M_line4_7->setPixmap(greenvertical);
+    ui->M_line4_8->setPixmap(greenright);
+    ui->M_line2_3->setPixmap(normalright);
+    ui->M_line2_4->setPixmap(normalleft);
+    ui->M_line2_1->setPixmap(normalarrowleft);
 
     ui->M_button_4->setEnabled(false);
     ui->M_button_5->setEnabled(false);
@@ -217,7 +228,7 @@ void MainWindow::on_M_button_4_pressed()
     }else{
         money -=med_graph.get_weight(2,4);
     }
-     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
+    ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     update_from(4);
 }
 
@@ -297,13 +308,13 @@ void MainWindow::on_M_button_3_pressed()
 {
 
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
-       QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
-       QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
-        QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
 
-       QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
+    QPixmap normalarrowleft("D:/DS Project Stuff/Images/vw3arrowleft.png");
 
-       QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
+    QPixmap normalarrowright("D:/DS Project Stuff/Images/vw3arrow.png");
 
        ui->M_line2_3->setPixmap(normalright);
        ui->M_line5_3->setPixmap(normalarrowright);
@@ -559,15 +570,16 @@ void MainWindow::on_M_button_11_pressed()
 
     QPixmap normalvertical("D:/DS Project Stuff/Images/vw.png");
 
-        QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap greenright("D:/DS Project Stuff/Images/vw3rightgreen.png");
+    QPixmap bottomrightgreen("D:/DS Project Stuff/Images/vw3bottomrightgreen.png");
 
+    QPixmap bottomright("D:/DS Project Stuff/Images/vw3bottomright.png");
 
-        QPixmap bottomright("D:/DS Project Stuff/Images/vw3bottomright.png");
+    ui->M_line11_13->setPixmap(greenright);
+    ui->M_line11_10->setPixmap(bottomrightgreen);
+    ui->M_line7_11->setPixmap(normalvertical);
 
-        ui->M_line11_13->setPixmap(greenright);
-        ui->M_line7_11->setPixmap(normalvertical);
-
-        ui->M_line7_8->setPixmap(bottomright);
+    ui->M_line7_8->setPixmap(bottomright);
 
     ui->M_weight7_8->setStyleSheet(WHITE);
     ui->M_weight7_11->setStyleSheet(WHITE);
@@ -610,6 +622,7 @@ void MainWindow::on_M_button_12_pressed()
 
 void MainWindow::on_M_finishButton_pressed()
 {
+
     ui->M_startgame_button->setEnabled(true);
     ui->M_finishButton->setEnabled(false);
     ui->M_button_10->setEnabled(false);
@@ -621,16 +634,17 @@ void MainWindow::on_M_finishButton_pressed()
     ui->M_weight12_13->setStyleSheet(WHITE);
     QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
     QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+    QPixmap bottomright("D:/DS Project Stuff/Images/vw3bottomright.png");
 
- setStars();
 
- buttonsfx->setAudioOutput(leveloutput);
- leveloutput->setVolume(0.8);
- buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/finish.mp3"));
- buttonsfx->play();
+     buttonsfx->setAudioOutput(leveloutput);
+     leveloutput->setVolume(0.8);
+     buttonsfx->setSource(QUrl("qrc:/D:/DS Project Stuff/SFX/finish.mp3"));
+     buttonsfx->play();
 
     ui->M_line11_13->setPixmap(normalright);
     ui->M_line12_13->setPixmap(normalleft);
+    ui->M_line11_10->setPixmap(bottomright);
     if(from[11]){
         money -= med_graph.get_weight(11,13);
     }else{
@@ -641,11 +655,18 @@ void MainWindow::on_M_finishButton_pressed()
     {
         ui->stackedWidget->setCurrentIndex(3);
         ui->winner_label->setText("You Lose");
+        ui->star1->setVisible(0);
+        ui->star2->setVisible(0);
+        ui->star3->setVisible(0);
         ui->nextLevel_button->setEnabled(false);
     }
     else
     {
         ui->winner_label->setText("You Win");
+        setStars();
+        ui->star1->setVisible(1);
+        ui->star2->setVisible(1);
+        ui->star3->setVisible(1);
         ui->stackedWidget->setCurrentIndex(3);
         ui->nextLevel_button->setEnabled(true);
 

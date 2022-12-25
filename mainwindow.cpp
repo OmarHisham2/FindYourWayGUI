@@ -19,7 +19,7 @@ QString make_number_main(int x){
 // construct graph
 
 
-
+extern Graph med_graph;
 
 int money = 999;
 int E_weight0_1,E_weight0_2,E_weight0_3,E_weight1_3,E_weight2_3,E_weight3_4,E_weight3_5,E_weight4_5,E_weight5_4;
@@ -370,7 +370,7 @@ void MainWindow::setStars()
     else if (money >= 0)
     {
         QPixmap greenstar("D:/DS Project Stuff/Images/stargreen.png");
-        ui->star1->setPixmap(greenstar);
+        ui->star2->setPixmap(greenstar);
     }
 }
 
@@ -510,6 +510,38 @@ void MainWindow::on_retry_button_pressed()
 
 
     }else if (seed){
+        ui->M_finishButton->setEnabled(0);
+
+        med_graph.generateRandomWeights(med_seed);
+        ui->stackedWidget->setCurrentIndex(4);
+        ui->M_seed_label->setText(QString("Seed : ").append(QString::number(med_seed)));
+        med_graph.printGraph();
+
+        money = med_graph.BellmanFordSP(0,13);
+        ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
+        ui->M_weight0_1->setText(make_number_main(med_graph.get_weight(0,1)));
+        ui->M_weight0_2->setText(make_number_main(med_graph.get_weight(0,2)));
+        ui->M_weight1_4->setText(make_number_main(med_graph.get_weight(1,4)));
+        ui->M_weight1_5->setText(make_number_main(med_graph.get_weight(1,5)));
+        ui->M_weight2_1->setText(make_number_main(med_graph.get_weight(2,1)));
+        ui->M_weight2_3->setText(make_number_main(med_graph.get_weight(2,3)));
+        ui->M_weight2_4->setText(make_number_main(med_graph.get_weight(2,4)));
+        ui->M_weight3_6->setText(make_number_main(med_graph.get_weight(3,6)));
+        ui->M_weight3_8->setText(make_number_main(med_graph.get_weight(3,8)));
+        ui->M_weight4_7->setText(make_number_main(med_graph.get_weight(4,7)));
+        ui->M_weight4_8->setText(make_number_main(med_graph.get_weight(4,8)));
+        ui->M_weight5_3->setText(make_number_main(med_graph.get_weight(5,3)));
+        ui->M_weight5_7->setText(make_number_main(med_graph.get_weight(5,7)));
+        ui->M_weight6_9->setText(make_number_main(med_graph.get_weight(6,9)));
+        ui->M_weight7_8->setText(make_number_main(med_graph.get_weight(7,8)));
+        ui->M_weight7_11->setText(make_number_main(med_graph.get_weight(7,11)));
+        ui->M_weight8_9->setText(make_number_main(med_graph.get_weight(8,9)));
+        ui->M_weight9_5->setText(make_number_main(med_graph.get_weight(9,5)));
+        ui->M_weight9_10->setText(make_number_main(med_graph.get_weight(9,10)));
+        ui->M_weight10_12->setText(make_number_main(med_graph.get_weight(10,12)));
+        ui->M_weight11_10->setText(make_number_main(med_graph.get_weight(11,10)));
+        ui->M_weight11_13->setText(make_number_main(med_graph.get_weight(11,13)));
+        ui->M_weight12_13->setText(make_number_main(med_graph.get_weight(12,13)));
 
     }else if(hard && !med && !easy)
     {
