@@ -10,10 +10,6 @@
 #include <queue>
 #include <list>
 
-
-#define GREEN "color:#00FF00"
-#define WHITE "color:#FFFFFF"
-
 //bool is5_or_6 = false;
 int is5_4_or7 = 5;
 int is1_or7 = 1;
@@ -25,6 +21,9 @@ int is10_or7 = 10;
 int is6_or16 = 6;
 int is17_or_18 = 17;
 int is21_or16 = 21;
+
+extern bool med,easy,seed,hard;
+long int insane_seed, number;
 vector<Edge> Insane_edges = { {0,1},{1,2},{2,3},{3,4},{4,5},{5,6},{4,6},{3,7},{7,2},
      {7,6},{7,8},{8,1},{0,13},{13,14},{13,12},{12,11},{11,10},{9,10},
      {8,9},{14,15},{15,21},{21,10},{20,10},{21,20},{16,20},{10,16},
@@ -47,12 +46,18 @@ void update_Ifrom(int x){
 }
 
 void MainWindow::on_hard_button_pressed()
-{
+{   //addiding code for retry logic
+    hard = true;
+    easy = 0;
+    med = 0;
+    //end of retry
     ui->stackedWidget->setCurrentIndex(5);
 
-    Insane_graph.generateRandomWeights();
+    number = Insane_graph.generateRandomWeights();
+    insane_seed = number;
+    cout<<"\n insane seed from insane level = "<<insane_seed;
     Insane_graph.printGraph();
-    money = Insane_graph.BellmanFordSP(0,13);
+    money = Insane_graph.BellmanFordSP(0,22);
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 
     ui->I_weight0_1->setText(make_Inumber(Insane_graph.get_weight(0,1)));
@@ -91,6 +96,42 @@ void MainWindow::on_hard_button_pressed()
     ui->I_weight18_19->setText(make_Inumber(Insane_graph.get_weight(18,19)));
     ui->I_weight10_15->setText(make_Inumber(Insane_graph.get_weight(10,15)));
     ui->I_finishButton->setEnabled(0);
+
+    ui->I_weight0_1->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight1_2->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight2_3->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight3_4->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight4_5->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight5_6->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight4_6->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight3_7->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight7_2->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight7_6->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight7_8->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight8_1->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight0_13->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight13_14->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight13_12->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight12_11->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight11_10->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight9_10->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight8_9->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight14_15->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight15_21->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight21_10->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight20_10->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight21_20->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight16_20->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight10_16->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight16_9->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight6_17->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight16_17->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight17_18->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight17_19->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight19_22->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight18_19->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_weight10_15->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
+    ui->I_startgame_button->setEnabled(true);
 }
 
 
@@ -99,7 +140,7 @@ void MainWindow::on_hard_button_pressed()
 void MainWindow::on_I_startgame_button_pressed()
 {
 
-    update_Ifrom(0);
+    //update_Ifrom(0);
     ui->I_button_1->setEnabled(true);
     ui->I_button_13->setEnabled(true);
     ui->I_startgame_button->setEnabled(0);
@@ -130,7 +171,7 @@ void MainWindow::on_I_button_1_pressed()
         ui->I_weight8_1->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(8,1);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -147,7 +188,7 @@ void MainWindow::on_I_button_13_pressed()
     ui->I_weight0_13->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     ui->I_button_13->setEnabled(false);
     money-= Insane_graph.get_weight(0,13);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -173,7 +214,7 @@ void MainWindow::on_I_button_2_pressed()
         ui->I_weight7_2->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(7,2);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -188,7 +229,7 @@ void MainWindow::on_I_button_3_pressed()
     ui->I_weight3_7->setStyleSheet("QLabel {background-color: transparent; color : #00FF00} ");
     ui->I_weight2_3->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(2,3);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -205,7 +246,7 @@ void MainWindow::on_I_button_4_pressed()
     ui->I_weight3_4->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     ui->I_button_4->setEnabled(false);
     money-= Insane_graph.get_weight(3,4);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is5_4_or7 = 4;
 }
@@ -221,7 +262,7 @@ void MainWindow::on_I_button_5_pressed()
     ui->I_weight4_6->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
     ui->I_weight4_5->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(4,5);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     //is5_or_6 = true;
     is5_4_or7 = 5;
@@ -257,7 +298,7 @@ void MainWindow::on_I_button_6_pressed()
         ui->I_button_7->setEnabled(false);
         money-= Insane_graph.get_weight(7,6);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is6_or16 = 6;
 }
@@ -279,7 +320,7 @@ void MainWindow::on_I_button_7_pressed()
     ui->I_weight3_4->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
     ui->I_weight3_7->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(3,7);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is1_or7 = 7;
     is10_or7 = 7;
@@ -303,7 +344,7 @@ void MainWindow::on_I_button_8_pressed()
     ui->I_weight7_16->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
     ui->I_weight7_8->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(7,8);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is0_or8 = 8;
     is8_or16 = 8;
@@ -333,7 +374,7 @@ void MainWindow::on_I_button_9_pressed()
         ui->I_weight16_9->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(16,9);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is9_11_20_or21 = 9;
 }
@@ -366,7 +407,7 @@ void MainWindow::on_I_button_10_pressed()
         ui->I_weight21_10->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(21,10);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is14_or10 = 10;
     is10_or7 =10;
@@ -381,7 +422,7 @@ void MainWindow::on_I_button_12_pressed()
     ui->I_weight13_14->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
     ui->I_weight13_12->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(13,12);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -392,7 +433,7 @@ void MainWindow::on_I_button_11_pressed()
     ui->I_weight11_10->setStyleSheet("QLabel {background-color: transparent; color : #00FF00;} ");
     ui->I_weight12_11->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(12,11);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is9_11_20_or21 = 11;
 }
@@ -406,7 +447,7 @@ void MainWindow::on_I_button_14_pressed()
     ui->I_weight13_12->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
     ui->I_weight13_14->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(13,14);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is14_or10 = 14;
 }
@@ -430,7 +471,7 @@ void MainWindow::on_I_button_15_pressed()
         ui->I_weight10_15->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(10,15);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -463,7 +504,7 @@ void MainWindow::on_I_button_16_pressed()
         ui->I_weight7_16->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(7,16);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is8_or16 = 16;
     is6_or16 = 16;
@@ -493,7 +534,7 @@ void MainWindow::on_I_button_17_pressed()
         ui->I_weight16_17->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(16,17);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is17_or_18 = 17;
 }
@@ -507,7 +548,7 @@ void MainWindow::on_I_button_18_pressed()
     ui->I_weight17_19->setStyleSheet("QLabel {background-color: transparent; color : #FFF} ");
     ui->I_weight17_18->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(17,18);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is17_or_18 = 18;
 }
@@ -530,7 +571,7 @@ void MainWindow::on_I_button_19_pressed()
         ui->I_weight18_19->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(18,19);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
 }
 
@@ -555,7 +596,7 @@ void MainWindow::on_I_button_20_pressed()
         ui->I_weight16_20->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
         money-= Insane_graph.get_weight(16,20);
     }
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is9_11_20_or21 = 20;
 }
@@ -569,7 +610,7 @@ void MainWindow::on_I_button_21_pressed()
     ui->I_weight21_10->setStyleSheet("QLabel {background-color: transparent; color : #00FF00;} ");
     ui->I_weight15_21->setStyleSheet("QLabel {background-color: transparent; color : #FF001B} ");
     money-= Insane_graph.get_weight(15,21);
-    cout<<"\nMoney = "<<money;
+    //cout<<"\nMoney = "<<money;
     ui->I_money_label->setText(QString("Money : ").append(QString::number(money)));
     is9_11_20_or21 = 21;
     is21_or16 = 21;
@@ -592,7 +633,10 @@ void MainWindow::on_I_finishButton_pressed()
     }
     else
     {
+        ui->winner_label->setText("You Win!!");
         ui->stackedWidget->setCurrentIndex(3);
+        ui->nextLevel_button->setEnabled(true);
+
     }
 
 }

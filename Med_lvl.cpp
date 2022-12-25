@@ -15,8 +15,9 @@
 
 #define GREEN "color:#00FF00"
 #define WHITE "color:#FFFFFF"
-
-
+extern int money;
+long int med_seed;
+extern bool med,easy,seed,hard;
 vector<Edge> edges_med = { {0,1},{0,2},{1,4},{1,5},{2,1},{2,3},{2,4},{3,6},{3,8},
      {4,7},{4,8},{5,3},{5,7},{6,9},{7,8},{7,11},{8,9},{9,5},
      {9,10},{10,12},{11,10},{11,13},{12,13}
@@ -31,7 +32,7 @@ void update_from(long int x){
     from[x]=1;
 }
 
-QString make_number(int x){
+QString make_number(long int x){
     return QString::number(-x);
 }
 
@@ -39,19 +40,22 @@ QString make_number(int x){
 void MainWindow::on_M_seed_button_pressed()
 {
     QInputDialog d;
-    d.setStyleSheet("color: blue;"
-                    "background-color: yellow;"
-                    "selection-color: yellow;"
-                    "selection-background-color: blue;");
+    d.setStyleSheet("color: #FFF;"
+                    "background-color: grey;"
+                    "selection-color: grey;"
+                    "selection-background-color: #000;");
     //d.setAutoFillBackground(0);
+
     d.exec();
     QString st =  d.textValue(); //add
     ui->stackedWidget->setCurrentIndex(4);
     //med graph ********************************************************
     ui->M_finishButton->setEnabled(0);
     num = med_graph.generateRandomWeights(st.toLong());
+    med_seed = num;
     ui->M_seed_label->setText(make_number(-num));
     med_graph.printGraph();
+
     money = med_graph.BellmanFordSP(0,13);
     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
     ui->M_weight0_1->setText(make_number(med_graph.get_weight(0,1)));
@@ -87,11 +91,15 @@ void MainWindow::on_M_seed_button_pressed()
 
 void MainWindow::on_medium_button_pressed()
 {
+    med =true;
+    easy=false;
+    hard=false;
     ui->stackedWidget->setCurrentIndex(4);
     //med graph ********************************************************
     ui->M_finishButton->setEnabled(0);
     num = med_graph.generateRandomWeights();
     ui->M_seed_label->setText(make_number(-num));
+    med_seed =num;
     med_graph.printGraph();
     money = med_graph.BellmanFordSP(0,13);
     ui->M_money_label->setText(QString("Money : ").append(QString::number(money)));
@@ -377,7 +385,7 @@ void MainWindow::on_M_button_7_pressed()
         ui->M_line9_5->setPixmap(bottomleft);
         ui->M_line5_7->setPixmap(normalleft);
         ui->M_line5_3->setPixmap(normalarrowright);
-
+        ui->M_line4_8->setPixmap(normalright); //just in case
 
     ui->M_button_3->setEnabled(false);
     ui->M_button_4->setEnabled(false);
@@ -577,12 +585,11 @@ void MainWindow::on_M_button_12_pressed()
 {
 
     QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
 
-        QPixmap greenleft("D:/DS Project Stuff/Images/vw3leftgreen.png");
 
-
-        ui->M_line12_13->setPixmap(greenleft);
-         ui->M_line10_12->setPixmap(normalright);
+    ui->M_line12_13->setPixmap(greenleft);
+    ui->M_line10_12->setPixmap(normalright);
 
     ui->M_weight10_12->setStyleSheet(WHITE);
     ui->M_weight12_13->setStyleSheet(GREEN);
@@ -598,6 +605,21 @@ void MainWindow::on_M_button_12_pressed()
 
 void MainWindow::on_M_finishButton_pressed()
 {
+    ui->M_startgame_button->setEnabled(true);
+    ui->M_finishButton->setEnabled(false);
+    ui->M_button_10->setEnabled(false);
+    ui->M_button_11->setEnabled(false);
+    ui->M_button_12->setEnabled(false);
+
+    ui->M_weight11_10->setStyleSheet(WHITE);
+    ui->M_weight11_13->setStyleSheet(WHITE);
+    ui->M_weight12_13->setStyleSheet(WHITE);
+    QPixmap normalright("D:/DS Project Stuff/Images/vw3right.png");
+    QPixmap normalleft("D:/DS Project Stuff/Images/vw3left.png");
+
+
+    ui->M_line11_13->setPixmap(normalright);
+    ui->M_line12_13->setPixmap(normalleft);
     if(from[11]){
         money -= med_graph.get_weight(11,13);
     }else{
@@ -612,6 +634,7 @@ void MainWindow::on_M_finishButton_pressed()
     }
     else
     {
+        ui->winner_label->setText("You Win");
         ui->stackedWidget->setCurrentIndex(3);
     }
 }

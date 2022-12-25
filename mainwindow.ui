@@ -27,11 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-
      <number>1</number>
-
-     <number>5</number>
-
     </property>
     <widget class="QWidget" name="page0">
      <widget class="QLabel" name="logo_label">
@@ -330,19 +326,11 @@ background-color: #ff6961;
        <bool>false</bool>
       </property>
      </widget>
-
      <widget class="QPushButton" name="M_seed_button">
       <property name="geometry">
        <rect>
         <x>500</x>
         <y>580</y>
-
-     <!--<widget class="QPushButton" name="insane_button">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>560</y>-->
-
         <width>261</width>
         <height>51</height>
        </rect>
@@ -376,11 +364,7 @@ background-color: #9A1B00;
 </string>
       </property>
       <property name="text">
-
        <string>SEED</string>
-
-       <string>Insane!</string>
-
       </property>
       <property name="checkable">
        <bool>false</bool>
